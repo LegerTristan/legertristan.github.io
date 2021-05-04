@@ -213,7 +213,7 @@ function App() {
 
 
                   <a style={{backgroundColor: '#336699'}} onClick={() => setButtonPopupX(true)}>
-                    <img src={process.env.PUBLIC_URL + "/images/siteV2_visuel.jpg"} alt="Scènes"/>
+                    <img src={process.env.PUBLIC_URL + "/images/siteV2_visuel.JPG"} alt="Scènes"/>
                     <p>Site V2</p>
                   </a>
                   
@@ -225,7 +225,7 @@ function App() {
                       <img src={process.env.PUBLIC_URL + "/icones/iconeJoindre.png"} alt="Télécharger le projet" title="Télécharger le projet"  />
                     </a>
                     <h2>Site V2</h2>
-                    <img src={process.env.PUBLIC_URL + "/images/siteV2_visuel.jpg"} alt="Scènes réalisées sur Unreal Engine 4"/>
+                    <img src={process.env.PUBLIC_URL + "/images/siteV2_visuel.JPG"} alt="Scènes réalisées sur Unreal Engine 4"/>
                     <p>En restant sur la même technologie que pour la première version de mon site, j'ai refait ma vitrine numérique en prenant un design
                       me correspondant plus que l'ancien. <br />
                       Comparé à l'ancienne version, je suis parti sur une landing page misant plus sur le design et les informations essentielles
@@ -235,7 +235,7 @@ function App() {
                   </Popup>
 
                   <a style={{backgroundColor: '#92CD00'}} onClick={() => setButtonPopupXI(true)}>
-                    <img src={process.env.PUBLIC_URL + "/images/GOL_visuel.jpg"} alt="Jeu de la vie"/>
+                    <img src={process.env.PUBLIC_URL + "/images/GOL_visuel.JPG"} alt="Jeu de la vie"/>
                     <p>Jeu de la vie</p>
                   </a>
 
@@ -245,7 +245,7 @@ function App() {
                     </div>
                     <img src={process.env.PUBLIC_URL + "/icones/iconeJoindreRefus.png"} alt="Impossible de télécharger le projet" title="Impossible de télécharger le projet" className="imgJoin"/>
                     <h2>Jeu de la vie</h2>
-                    <img src={process.env.PUBLIC_URL + "/images/GOL_visuel.jpg"} alt="CookingMoona"/>
+                    <img src={process.env.PUBLIC_URL + "/images/GOL_visuel.JPG"} alt="CookingMoona"/>
                     <p>Le jeu de la vie est une application que j'ai eu à réaliser à l'occasion d'un test pour une école. <br/>
                       Il s'agit d'une version modifiée du célèbre automate cellulaire de John Conway. Dans cette version,
                       on imagine des animaux et des végétaux plutôt que des cellules. <br />
