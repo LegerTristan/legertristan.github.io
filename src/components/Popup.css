@@ -1,0 +1,119 @@
+.popupMain{
+    position: fixed;
+    background-color: rgba(0, 0, 0, .2);
+    top: 0px;
+    left: 20%;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popupInner{
+    max-width: 35em;
+    height: 90%;
+
+    padding: 1em 0em;
+    margin-right: 20%;
+    border-radius: 4%;
+}
+
+.popupInner article{
+    width: 90%;
+    padding: 0% 5%;
+    height: 98%;
+    margin-top: 2%;
+    background-color: #EEEEEE;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 2%;
+    position: initial;
+}
+.popupInner article h2{
+    margin-top: -5%;
+}
+
+.popupInner article p{
+    overflow: hidden;
+    height: 50%;
+}
+
+.toolsIcon{
+    position: relative;
+    left: 45%;
+    top: 1%;
+}
+
+.toolsIcon img{
+    width: 2em;
+    height: 2em;
+}
+
+.imgJoin{
+    position: relative;
+    right: 50%;
+    bottom: 5%;
+
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    width: 2em !important;
+    height: 2em !important;
+}
+
+.imgJoin img{
+    width: 2em !important;
+    height: 2em !important;
+}
+
+.imgJoin:hover{
+    cursor: pointer;
+    background-color: #AAAAAA;
+    transform: scale(1) !important;
+}
+
+.closeBtn{
+    width: 1.5em !important;
+    height: 1.5em !important;
+    margin-bottom: 2%;
+    padding: 1%;
+    border-radius: 50%;
+    transition: all .3s ease;
+}
+
+.closeBtn:hover, .closeBtn:touch{
+    cursor: pointer;
+    background-color: #AAAAAA;
+}
+
+/*===== ============== =====*/
+/*===== VERSION MOBILE =====*/
+/*===== ============== =====*/
+
+@media (max-width: 1200px){
+
+    .popupMain{
+        position: fixed;
+        background-color: rgba(0, 0, 0, .2);
+        top: 0px;
+        left: 10%;
+        width: 100%;
+        height: 80%;
+        z-index: 5;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .popupInner article p{
+        height: 80%;
+        overflow: visible;
+    }
+}

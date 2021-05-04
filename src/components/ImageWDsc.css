@@ -1,0 +1,33 @@
+.IWDMain{
+    background-size: 100% 100%;
+    padding: 1em 0;
+    min-width: 100%;
+    min-height: 25em;
+}
+
+.BannerText{
+    color: white;
+    padding-left: 1em;
+    width: 35%;
+    text-align: center;
+}
+
+.BannerTextInvert{
+    color: white;
+    padding-left: 69%;
+    width: 30%;
+    text-align: center;
+}
+
+/*===== ============== =====*/
+/*===== VERSION MOBILE =====*/
+/*===== ============== =====*/
+
+@media (max-width: 1200px){
+    .IWDMain{
+        background-size: 100% 100%;
+        padding: 1em 0;
+        min-width: 100%;
+        max-height: 10em;
+    }
+}

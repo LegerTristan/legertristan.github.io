@@ -1,0 +1,69 @@
+.Canvas{
+  min-height: 70em;
+}
+
+.IconBackgroundWrapper{
+    overflow: hidden;
+    height: 70em;
+    display: block;
+}
+
+.IconBackgroundSlider{
+    width: 300%;
+    height: 300%;
+    animation-name: diagonalTranslation;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes diagonalTranslation {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-20%, -20%, 0);
+    }
+  }
+
+.Content{
+  display: flex;
+  flex-direction: column;
+  margin: -70em 0% 0%;
+  padding-top: .5em;
+  position: relative;
+  z-index: 25555;
+}
+
+.Content > h3, .Content > p{
+  margin: 0;
+  padding: .25em 0;
+  color: white;
+  text-align: center;
+}
+
+/*===== ============== =====*/
+/*===== VERSION MOBILE =====*/
+/*===== ============== =====*/
+
+@media (max-width: 1280px){
+  .Canvas{
+    min-height: 75em;
+  }
+
+  .IconBackgroundWrapper{
+    overflow: hidden;
+    height: 75em;
+    display: block;
+  }
+
+  .Content{
+    display: flex;
+    flex-direction: column;
+    margin: -75em 0% 0%;
+    padding-top: .5em;
+    position: relative;
+    z-index: 25555;
+  }
+}
+
