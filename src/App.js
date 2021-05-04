@@ -36,7 +36,7 @@ function App() {
             <nav className="Pf_Menu">
               <ul>
                 <li>
-                  <a className="MenuLink">
+                  <a className="MenuLink" href="#SectionPresentation">
                     <img src={process.env.PUBLIC_URL + "/images/accolade_L.png"} alt=" "/>
                     <p>PRÉSENTATION</p>
                     <img src={process.env.PUBLIC_URL + "/images/accolade_R.png"} alt=" "/>
