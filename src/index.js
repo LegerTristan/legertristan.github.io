@@ -1,10 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import App from './components/app/App';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
+
+// ==========================================
+import reportWebVitals from './reportWebVitals';
+// Galère 7: Le provider ne prends qu'une variable "value" et rie d'autres, tu ne peux pas le rename :)
+// Galère 8: Le commentaire juste au dessus a suffit à presque péter le projet, parce que React c'est un peu à chier.
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
     <App />

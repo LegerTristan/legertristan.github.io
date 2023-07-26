@@ -1,0 +1,8 @@
+{
+  "english": [
+    { "id": "language", "text": "Language"}
+  ],
+  "french": [
+    { "id": "language", "text": "Langue" }
+  ]
+}

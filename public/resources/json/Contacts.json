@@ -1,0 +1,12 @@
+{
+  "english": [
+    { "id": "gmail", "text": "You can contact me on this email for any offer, request or even a simple information." },
+    { "id": "itchIo", "text": "You want to see more projects that I have made ? Then take a look at my itch.io account !" },
+    { "id": "linkedin", "text": "You will find my academic and professional background here." }
+  ],
+  "french": [
+    { "id": "gmail", "text": "Vous pouvez me contacter à cet email pour n'importe quelle offre, demande, ou même un simple renseignment." },
+    { "id": "itchIo", "text": "Tu veux voir plus de projets que j'ai réalisé ? Alors viens jeter un coup d'oeil à mon compte itch.io !" },
+    { "id": "linkedin", "text": "Tu retrouveras mon parcours scolaire et professionnel ici." }
+  ]
+}

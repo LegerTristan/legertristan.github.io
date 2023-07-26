@@ -1,0 +1,16 @@
+{
+  "english": [
+    { "id": "AboutTitle", "text": "About" },
+	{ "id": "SkillsTitle", "text": "Skills" },
+    { "id": "ProjectsTitle", "text": "Portfolio" },
+    { "id": "BlogsTitle", "text": "Blogs" },
+	{ "id": "ContactTitle", "text": "Contacts" }
+  ],
+  "french": [
+    { "id": "AboutTitle", "text": "À propos" },
+	{ "id": "SkillsTitle", "text": "Compétences" },
+    { "id": "ProjectsTitle", "text": "Portfolio" },
+    { "id": "BlogsTitle", "text": "Articles" },
+	{ "id": "ContactTitle", "text": "Contacts" }
+  ]
+}
