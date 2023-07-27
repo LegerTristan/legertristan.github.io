@@ -1,0 +1,76 @@
+.ddText{
+    margin-right: 20%;
+}
+
+.ddText > a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ddText > a > h1{
+    color:white;
+    font-size: larger;
+}
+
+.ddText > a img{
+    width: 1%;
+    height: 1%;
+    transition: all .3s ease;
+}
+
+.ddText > a img:hover{
+    cursor:pointer;
+    transform: scale(1.2);
+}
+
+.ddText hr{
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-top: 3px solid;
+    border-color: white;
+}
+
+.textContentDisplayed
+{
+    animation-name: textDisplayed;
+    animation-duration: 0.5s;
+}
+
+@keyframes textDisplayed {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+  
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.textContentHidden
+{
+    animation-name: textHidden;
+    animation-duration: 0.5s;
+}
+
+@keyframes textHidden {
+    from {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+  
+    to {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .ddText > a img{
+        width: 3%;
+        height: 3%;
+    }
+    
+}

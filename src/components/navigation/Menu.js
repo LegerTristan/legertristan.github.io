@@ -22,7 +22,7 @@ function Menu({pages})
         <nav>
             <ul>
                 {
-                    pages.map(page => <li key={page.textIndex}><Link to={page.link}>{texts[page.textIndex].text}</Link></li>)
+                    pages.map(page => <li key={page.textIndex}><Link to={page.link} className="link">{texts[page.textIndex].text}</Link></li>)
                 }
             </ul>
         </nav>

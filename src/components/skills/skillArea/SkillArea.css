@@ -1,0 +1,39 @@
+.skills article
+{
+    padding: 1% 0% 3% 0%;
+}
+
+.skills h1
+{
+    font-size: larger;
+}
+
+.skills hr
+{
+    margin: 2rem 0rem 2rem 0rem;
+}
+
+.skillsFarm
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0% 1%;
+}
+
+@media screen and (max-width: 720px) 
+{
+    .skills h1
+    {
+        font-size: large;
+    }
+}
+
+@media screen and (min-width: 720px) 
+{
+    .skillsFarm
+    {
+        margin: 0% 5%;
+    }
+}

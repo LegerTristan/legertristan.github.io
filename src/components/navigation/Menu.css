@@ -13,7 +13,7 @@ ul
     font-size: x-large;
 }
 
-nav a               /* Galère 2: Le display: flex annule les modifs sur le transform (donc pas de transform: scale())*/
+nav a             /* Galère 2: Le display: flex annule les modifs sur le transform (donc pas de transform: scale())*/
 {
     color: white;
     text-decoration: none;
@@ -24,7 +24,7 @@ nav a               /* Galère 2: Le display: flex annule les modifs sur le tran
     transform: scale(1);
 }
 
-a:hover
+.link:hover
 {
     -webkit-transform: scale(1.2); /* Chrome, Safari, Opera */
     transform: scale(1.2); 

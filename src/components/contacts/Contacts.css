@@ -37,7 +37,7 @@ section aside
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    animation: 1.2s ease-out 0s 1 slideFadeInRight;
+    animation: 1s ease-out 0s 1 slideFadeInRight;
 }
 
 @keyframes slideFadeInRight

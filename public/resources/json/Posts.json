@@ -1,0 +1,8 @@
+{
+  "english": [
+    { "id": "empty", "text": "There is no posts at the moment, please be patient !" }
+  ],
+  "french": [
+    { "id": "empty", "text": "Il n'y a pas de posts pour le moment, soyez patients !" }
+  ]
+}

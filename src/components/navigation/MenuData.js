@@ -13,7 +13,7 @@
     },
     {
         textIndex: 3,
-        link: "/blogs"
+        link: "/posts"
     },
     {
         textIndex: 4,

@@ -1,0 +1,64 @@
+.skillInfo
+{
+    flex-basis: 33.333%;
+    padding-bottom: 2.5rem;
+    animation: 5s infinite linear Float;
+}
+
+.skillInfo img
+{
+    width: 20%;
+    height: 20%;
+}
+
+.skillInfo img:hover
+{
+    cursor: pointer;
+}
+
+.skillInfo h2
+{
+    font-size: large;
+}
+
+.visibleSkillDsc
+{
+    animation: 0.3s 1 linear forwards slideFadeInTop;
+}
+
+.hiddenSkillDsc
+{
+    animation: 0.3s 1 linear forwards slideFadeOutBottom;
+}
+
+@keyframes Float
+{
+    0% 
+    {
+      transform: translateY(-5%);
+    }
+    50% 
+    {
+        transform: translateY(5%);
+    }
+    100% 
+    {
+        transform: translateY(-5%);
+    }
+}
+
+@media screen and (max-width: 1280px) 
+{
+    .skillInfo h2
+    {
+        font-size: medium;
+    }
+}
+
+@media screen and (max-width: 720px) 
+{
+    .skillInfo h2
+    {
+        font-size: small;
+    }
+}

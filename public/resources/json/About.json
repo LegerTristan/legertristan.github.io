@@ -1,0 +1,32 @@
+{
+  "english": [
+    { "id": "MeTitle", "text": "From the cow floor to the digital world" },
+	{ "id": "MePart_1", "text": "As a 23-year-old student living in a small town in the Limousin, my main passion is programming." },
+    { "id": "MePart_2", "text": "I have always been driven by this desire to create video games for about fifteen years and I finally started in this field 6 years ago." },
+	{ "id": "MePart_3", "text": "Graduated with a Bachelor of Science and a National Diploma in Computing, I am in my 2nd year of Gameplay Programming at Objectif 3D where I am taking courses online." },
+    { "id": "SoftSkillTitle", "text": "Personal Expertise" },
+	{ "id": "SoftSkillPart_1", "text": "For several years, I have been able to gain practical experience in designing game architecture and tools." },
+    { "id": "SoftSkillPart_2", "text": "Whether as a team member or as a lead, I have been able to take advantage of each of these opportunities and gain a sense of organization and a significant level of autonomy." },
+	{ "id": "HardSkillTitle", "text": "Familiarity with game development tools" },
+	{ "id": "HardSkillPart_1", "text": "On the software side, , I have a clear mastery of the most common game engines: Unreal and Unity, and I have also been able to practice native programs with graphics libraries such as OpenGL and SFML or WPF for tool creation." },
+	{ "id": "FutureTitle", "text": "A desire to participate in creating tomorrow's games" },
+	{ "id": "FuturePart_1", "text": "At the end of my 3rd year of Gameplay Programming, I would like to join the market and invest in a project in collaboration with professionals from all areas of the video game industry." },
+	{ "id": "FuturePart_2", "text": "To contact me, it's " },
+	{ "id": "FuturePartLink", "text": "here" }
+  ],
+  "french": [
+    { "id": "MeTitle", "text": "Du plancher des vaches au monde numérique" },
+	{ "id": "MePart_1", "text": "Étudiant de 23ans vivant dans une petite ville du limousin, ma principale passion est la programmation." },
+    { "id": "MePart_2", "text": "J'ai toujours été animé par cette envie de créer des jeux-vidéos depuis une quinzaine d'années et je me suis enfin lancé dans ce domaine il y a 6 ans." },
+	{ "id": "MePart_3", "text": "Diplomé d'un BAC S et d'un DUT Informatique, je suis en 2ème année de Gameplay Programming à Objectif 3D où je suis les cours en distanciel." },
+    { "id": "SoftSkillTitle", "text": "Une expertise personnelle" },
+	{ "id": "SoftSkillPart_1", "text": "Depuis plusieurs années, j'ai pu me forger une expérience concrète en conception d'architecture et d'outil à destination des jeux-vidéos." },
+    { "id": "SoftSkillPart_2", "text": "Que ce soit en tant que membre d'une équipe, ou en tant que lead, j'ai su tirer profits de chacune de ces occasions et acquérir un sens de l'organisation et une autonomie non négligeable." },
+	{ "id": "HardSkillTitle", "text": "Une aisance avec les outils de développement de jeux" },
+	{ "id": "HardSkillPart_1", "text": "Côté soft, j'ai une nette maitrise des moteurs de jeu les plus communs : Unreal et Unity, et j'ai également pu m'exercer sur des programmes natifs avec des librairies graphiques comme OpenGL et SFML ou WPF pour la création d'outils." },
+	{ "id": "FutureTitle", "text": "Une volonté de participer à la création des jeux de demain" },
+	{ "id": "FuturePart_1", "text": "À la fin de ma 3ème année de Gameplay Programming, je souhaite rejoindre le marché et m'investir dans un projet en collaboration avec des professionels de tout les milieux du jeu-vidéo." },
+	{ "id": "FuturePart_2", "text": "Pour me contacter, c'est " },
+	{ "id": "FuturePartLink", "text": "ici" }
+  ]
+}

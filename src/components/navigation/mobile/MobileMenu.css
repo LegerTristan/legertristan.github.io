@@ -1,0 +1,81 @@
+nav div
+{
+    width: -webkit-fill-available;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+}
+
+.arrowIconVisibleState, .arrowIconHiddenState
+{
+    width: 3rem;
+    height: auto;
+    padding: 0.5rem 0rem;
+}
+
+.arrowIconVisibleState:hover, .arrowIconHiddenState:hover
+{
+    cursor: pointer;
+}
+
+.arrowIconVisibleState
+{
+    transform: rotate(180deg);
+}
+
+.visibleMenu, .hiddenMenu
+{
+    flex-direction: column;
+    align-items: center;
+    padding: 0%;
+}
+
+.visibleMenu
+{
+    animation: 0.5s ease-out 0s 1 slideFadeInTop;
+}
+
+.visibleMenu hr, .hiddenMenu hr
+{
+    width: -webkit-fill-available;
+    margin: 0px;
+}
+
+.visibleMenu li, .hiddenMenu li
+{
+    padding: 1rem 0rem;
+}
+
+.hiddenMenu
+{
+    animation: 0.5s ease-out 0s 1 forwards slideFadeOutBottom;
+}
+
+@keyframes slideFadeInTop
+{
+    0% 
+    {
+      transform: translateY(-300%);
+      opacity: 0%;
+    }
+    100% 
+    {
+      transform: translateY(0);
+      opacity: 100%;
+    }
+}
+
+@keyframes slideFadeOutBottom
+{
+    0% 
+    {
+      transform: translateY(0%);
+      opacity: 100%;
+    }
+    100% 
+    {
+      transform: translateY(-300%);
+      opacity: 0%;
+      position: fixed;
+    }
+}

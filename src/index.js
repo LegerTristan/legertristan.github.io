@@ -5,7 +5,7 @@ import './index.css';
 
 
 // ==========================================
-import reportWebVitals from './reportWebVitals';
+import reportWebVitals from './tests/reportWebVitals';
 // Galère 7: Le provider ne prends qu'une variable "value" et rie d'autres, tu ne peux pas le rename :)
 // Galère 8: Le commentaire juste au dessus a suffit à presque péter le projet, parce que React c'est un peu à chier.
 const root = ReactDOM.createRoot(document.getElementById('root'));
