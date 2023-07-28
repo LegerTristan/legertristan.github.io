@@ -88,8 +88,8 @@ function Popup({title, imgSrc, imgAlt, videoSrc, onPopupActivate, onPopupDeactiv
                                 {children}
                                 <hr />
                                 <div className="closeBtnContainer">
-                                    <img src={process.env.PUBLIC_URL + "resources/icons/iconeClose.png"} alt="Fermer" className="closeBtn" onClick={() => SetIsClosing(true)}/>
-                                    <img src={process.env.PUBLIC_URL + "resources/icons/iconeCloseHovered.png"} alt="Fermer" className="closeBtnHovered" onClick={() => SetIsClosing(true)}/>
+                                    <img src={process.env.PUBLIC_URL + "resources/icons/iconClose.png"} alt="Fermer" className="closeBtn" onClick={() => SetIsClosing(true)}/>
+                                    <img src={process.env.PUBLIC_URL + "resources/icons/iconCloseHovered.png"} alt="Fermer" className="closeBtnHovered" onClick={() => SetIsClosing(true)}/>
                                 </div>
                             </article>
                         </div>

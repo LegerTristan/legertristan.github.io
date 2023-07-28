@@ -16,9 +16,9 @@ function Contacts() {
   return (
     <section className="Contacts">
       <aside>
-        <img src="/resources/icons/IconGmail.png" alt="Gmail icon" className="iconGmail"/>
-        <img src="/resources/icons/IconItchIo.png" alt="Itch.io icon" className="iconItchIo"/>
-        <img src="/resources/icons/IconLinkedin.png" alt="Linkedin icon" className="iconLinkedin"/>
+        <img src="/resources/icons/iconGmail.png" alt="Gmail icon" className="iconGmail"/>
+        <img src="/resources/icons/iconItchIo.png" alt="Itch.io icon" className="iconItchIo"/>
+        <img src="/resources/icons/iconLinkedin.png" alt="Linkedin icon" className="iconLinkedin"/>
       </aside>
       <article>
         <address>
