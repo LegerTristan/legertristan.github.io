@@ -1,0 +1,11 @@
+.importantText
+{
+    border-color: #61fbf8;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 0px;
+    padding: 1em;
+    margin: 1em 0em !important;
+    font-style: italic;
+    text-align: center !important;
+}

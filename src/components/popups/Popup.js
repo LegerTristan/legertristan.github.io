@@ -42,18 +42,18 @@ function Popup({title, imgSrc, imgAlt, videoSrc, onPopupActivate, onPopupDeactiv
     useEffect(() => {
         const handleAnimationEnd = () => {
           if (isClosing) {
-            // Fermez la popup ici
             ClosePopup();
           }
         };
       
-        if (popupInnerRef.current) {
-          popupInnerRef.current.addEventListener('animationend', handleAnimationEnd);
+        const currentInnerRef = popupInnerRef.current;
+        if (currentInnerRef) {
+            currentInnerRef.addEventListener('animationend', handleAnimationEnd);
         }
       
         return () => {
-          if (popupInnerRef.current) {
-            popupInnerRef.current.removeEventListener('animationend', handleAnimationEnd);
+          if (currentInnerRef) {
+            currentInnerRef.removeEventListener('animationend', handleAnimationEnd);
           }
         };
       }, [isClosing]);
@@ -82,15 +82,15 @@ function Popup({title, imgSrc, imgAlt, videoSrc, onPopupActivate, onPopupDeactiv
                     <div className="popupMain">
                         <div className={isClosing ? 'popupInnerClosing' : 'popupInner'} ref={popupInnerRef}>
                             <article>
+                                <div className="closeBtnContainer">
+                                    <img src={process.env.PUBLIC_URL + "resources/icons/iconClose.png"} alt="Fermer" className="closeBtn" onClick={() => SetIsClosing(true)}/>
+                                    <img src={process.env.PUBLIC_URL + "resources/icons/iconCloseHovered.png"} alt="Fermer" className="closeBtnHovered" onClick={() => SetIsClosing(true)}/>
+                                </div>
                                 <h2>{title}</h2>
                                 {VisualContent(true)}
                                 <a className={`${joinRef ? 'joinLink' : 'errorLink'}`} href={joinRef} target="_blank" rel="noopener noreferrer">Télécharger</a>
                                 {children}
                                 <hr />
-                                <div className="closeBtnContainer">
-                                    <img src={process.env.PUBLIC_URL + "resources/icons/iconClose.png"} alt="Fermer" className="closeBtn" onClick={() => SetIsClosing(true)}/>
-                                    <img src={process.env.PUBLIC_URL + "resources/icons/iconCloseHovered.png"} alt="Fermer" className="closeBtnHovered" onClick={() => SetIsClosing(true)}/>
-                                </div>
                             </article>
                         </div>
                     </div>

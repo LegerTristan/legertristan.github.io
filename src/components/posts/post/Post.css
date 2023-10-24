@@ -1,0 +1,39 @@
+.postArticle
+{
+    box-shadow: 3px 5px black, -0.5px -0.5px black;
+    width: -webkit-fill-available;
+    transition: all 0.3s ease-in-out;
+    cursor: default;
+    color: white;
+}
+
+.postArticle:hover
+{
+    box-shadow: 8px 15px 10px black, -1px -1px 10px black;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.postArticle h2
+{
+    text-align: left;
+    margin: 0% 1%;
+}
+
+.postArticle p
+{
+    margin: 1% 1% 0% 2.5%;
+    text-align: left;
+}
+
+.publishingDate
+{
+    text-align: right !important;
+}
+
+.postArticle hr
+{
+    margin: 0.5% 0% 0% 0%;
+    height: 0.5rem;
+    background-color: #61dafb;
+}

@@ -1,8 +1,12 @@
 import React, { useState, useContext, useEffect} from 'react';
 import LanguageContext from '../languagesDropdown/LanguagesContext';
-import './Post.css';
+import Post from './post/Post';
 
-function Post() {
+// =============   Datas  ===================
+import postsData from './PostsData';
+import './Posts.css';
+
+function Posts() {
   const { currentLanguage } = useContext(LanguageContext);
   const [ texts, setTexts ] = useState(Array(3).fill({})); 
 
@@ -14,10 +18,20 @@ function Post() {
   }, [currentLanguage]);
 
   return (
-    <section>
-      <p>{texts[0].text}</p>
+    <section className="posts">
+      {
+        postsData.map
+        (
+          postData => <Post key={postData.titleIndex}
+            title={texts[postData.titleIndex].text} 
+            description={texts[postData.descriptionIndex].text}
+            link={postData.link} date={texts[postData.dateIndex].text}
+            />
+        )
+      }
+
     </section>
   );
 }
 
-export default Post;
+export default Posts;

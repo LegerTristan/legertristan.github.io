@@ -18,12 +18,12 @@ function Portfolio() {
   return (
       <section className="portfolioSection">
         <div className={`line ${selectedLineIndex === 1 ? 'Active' : ''}`}>
-          <Popup title={"Stress Test\nPathfinding"} imgSrc={"/resources/visuels/STPVisuel.png"} imgAlt={"Visual of Stress Test Pathfinding"} videoSrc={null} 
-          onPopupActivate={() => setSelectedLineIndex(1)} onPopupDeactivate={() => setSelectedLineIndex(0)} joinRef={"https://github.com/LegerTristan/StressTestPathfinding"}>
+          <Popup title={"Unity Binded \nGraphics"} imgSrc={"/resources/visuels/UBGVisuel.jpg"} imgAlt={"Visual of Unity Binded Graphics"} videoSrc={null} 
+            onPopupActivate={() => setSelectedLineIndex(1)} onPopupDeactivate={() => setSelectedLineIndex(0)} joinRef={null}>
             <p>
-              {texts[0].text}<br/>
-              {texts[1].text}<br/>
-              {texts[2].text}
+              {texts[28].text}<br/>
+              {texts[29].text}<br/>
+              {texts[30].text}
             </p>
           </Popup>
            
@@ -47,13 +47,12 @@ function Portfolio() {
         </div>
 
         <div className={`line ${selectedLineIndex === 2 ? 'Active' : ''}`}>
-          <Popup title={"SYRA"} imgSrc={"/resources/visuels/SYRAVisuel.jpg"} imgAlt={"Visual of SYRA"} videoSrc={null}
-           onPopupActivate={() => setSelectedLineIndex(2)} onPopupDeactivate={() => setSelectedLineIndex(0)} joinRef={null}>
+          <Popup title={"Stress Test\nPathfinding"} imgSrc={"/resources/visuels/STPVisuel.png"} imgAlt={"Visual of Stress Test Pathfinding"} videoSrc={null} 
+            onPopupActivate={() => setSelectedLineIndex(1)} onPopupDeactivate={() => setSelectedLineIndex(0)} joinRef={"https://github.com/LegerTristan/StressTestPathfinding"}>
             <p>
-              {texts[9].text}<br />
-              {texts[10].text}<br />
-              {texts[11].text}<br />
-              {texts[12].text}
+              {texts[0].text}<br/>
+              {texts[1].text}<br/>
+              {texts[2].text}
             </p>
           </Popup>
 
@@ -84,12 +83,14 @@ function Portfolio() {
             </p>
           </Popup>
 
-          <Popup title={"Site"} imgSrc={"/resources/visuels/SiteVisuel.png"} imgAlt={"Visual of my site"} videoSrc={null} 
-          onPopupActivate={() => setSelectedLineIndex(3)} onPopupDeactivate={() => setSelectedLineIndex(0)} joinRef={"https://github.com/LegerTristan/legertristan.github.io"}>
+          <Popup title={"SYRA"} imgSrc={"/resources/visuels/SYRAVisuel.jpg"} imgAlt={"Visual of SYRA"} videoSrc={null}
+           onPopupActivate={() => setSelectedLineIndex(2)} onPopupDeactivate={() => setSelectedLineIndex(0)} joinRef={null}>
             <p>
-              {texts[20].text}<br/>
-              {texts[21].text}
-            </p>  
+              {texts[9].text}<br />
+              {texts[10].text}<br />
+              {texts[11].text}<br />
+              {texts[12].text}
+            </p>
           </Popup>
 
           <Popup title={"Texture Combiner"} imgSrc={"/resources/visuels/TextureCombinerVisuel.png"} imgAlt={"Visual of Texture Combiner"} videoSrc={null} 
@@ -103,6 +104,14 @@ function Portfolio() {
         </div>
 
         <div className={`line ${selectedLineIndex === 4 ? 'Active' : ''}`}>
+        <Popup title={"Site"} imgSrc={"/resources/visuels/SiteVisuel.png"} imgAlt={"Visual of my site"} videoSrc={null} 
+          onPopupActivate={() => setSelectedLineIndex(3)} onPopupDeactivate={() => setSelectedLineIndex(0)} joinRef={"https://github.com/LegerTristan/legertristan.github.io"}>
+            <p>
+              {texts[20].text}<br/>
+              {texts[21].text}
+            </p>  
+          </Popup>
+
           <Popup title={"Game of Life"} imgSrc={"/resources/visuels/GOLVisuel.jpg"} imgAlt={"Visual of my Game of Life"} videoSrc={null}
           onPopupActivate={() => setSelectedLineIndex(4)} onPopupDeactivate={() => setSelectedLineIndex(0)} joinRef={null}>
             <p>

@@ -1,0 +1,50 @@
+.postContent
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.postContent p
+{
+    text-align: justify;
+    margin: 0.3em 0em;
+}
+
+.postContent h1
+{
+    font-size: 2em;
+    color: aquamarine;
+    text-shadow: 3px 3px black, -3px -3px black;
+}
+
+.postContent h2
+{
+    text-align: justify;
+    margin: 2em 0em 1em 0em;
+    color: #61dafb;
+    text-shadow: 0.1em 0.1em black, -0.1em -0.1em black;
+}
+
+.postContent ul
+{
+    flex-direction: column;
+    list-style-type: disc;
+    font-size: medium !important;
+    padding-inline-start: 40px;
+}
+
+.postContent ul, .postContent ol
+{
+    margin-left: 1.5em;
+}
+
+
+.postContent li
+{
+    text-align: justify;
+}
+
+.postContent pre{
+    text-align: left;
+    margin: 2em 0em;
+}

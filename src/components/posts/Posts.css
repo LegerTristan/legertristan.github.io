@@ -1,0 +1,10 @@
+.posts
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.posts article
+{
+    margin: 2% 0em;   
+}

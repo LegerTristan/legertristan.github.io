@@ -10,7 +10,8 @@ import MobileMenu from '../navigation/mobile/MobileMenu';
 import About from '../about/About';
 import Skills from '../skills/Skills';
 import Portfolio from '../portfolio/Portfolio';
-import Post from '../posts/Post';
+import Posts from '../posts/Posts';
+import PostReflection from '../postsContents/PostReflection';
 import Contacts from '../contacts/Contacts';
 import Footer from '../footer/Footer';
 // =============   Datas  ===================
@@ -36,7 +37,8 @@ function App() {
           <Route path="/" element={<About/>} />
           <Route path="/skills" element={<Skills/>} />
           <Route path="/portfolio" element={<Portfolio/>} />
-          <Route path="/posts" element={<Post/>} />
+          <Route path="/posts" element={<Posts/>} />
+          <Route path="/posts_reflection" element={<PostReflection/>} />
           <Route path="/contacts" element={<Contacts/>} />
           <Route path="*" element={<Navigate to="/" replace/>}/>
         </Routes>
