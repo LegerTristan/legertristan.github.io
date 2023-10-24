@@ -27,7 +27,10 @@
 	{ "id": "TCPart_3", "text": "The graphical interface was made with WPF and the logical part in C#." },
 	{ "id": "GOLPart_1", "text": "The game of life is an application that I had to develop for a test at a school." },
 	{ "id": "GOLPart_2", "text": "It is a modified version of John Conway's famous cellular automaton. In this version, we imagine animals and plants rather than cells." },
-	{ "id": "GOLPart_3", "text": "This version was an excellent training in object-oriented programming, through this project, I was able to apply my knowledge on the principles of object-oriented (encapsulation, inheritance etc) and at the same time test new design patterns, including Object Pooling." }
+	{ "id": "GOLPart_3", "text": "This version was an excellent training in object-oriented programming, through this project, I was able to apply my knowledge on the principles of object-oriented (encapsulation, inheritance etc) and at the same time test new design patterns, including Object Pooling." },
+	{ "id": "UBGPart_1", "text": "Unity Binded Graphics (UBG) is a library that offer you the ability to create simple UI elements that draws a specific value selected by the user." },
+	{ "id": "UBGPart_2", "text": "This plugin used the reflection and create specific generic method at runtime in order to connect any member from a MonoBehaviour class to an UI."},
+    { "id": "UBGPart_3", "text": " I learned a lot during every step of the development, this tool offered me a chance to study runtime method creation, AOT (Ahead of Time) and JIT (Just in Time) compilers, the purpose of a Linker and how a compiler strips useless code during the compilation." }
   ],
   "french": [
     { "id": "STPPart_1", "text": "Il s'agit d'une application de stress test d'algorithme de résolution du plus court chemin entre deux points sur une grille statique. J'ai implémenté dedans les algorithmes de pathfinding les plus populaires (Djikstra, A*) ainsi que des algorithmes plus propices à des cas particuliers (Greedy, B*)." },
@@ -57,6 +60,9 @@
 	{ "id": "TCPart_3", "text": "L'interface graphique a été réalisé avec WPF et la partie logique en C#." },
 	{ "id": "GOLPart_1", "text": "Le jeu de la vie est une application que j'ai eu à réaliser à l'occasion d'un test pour une école." },
 	{ "id": "GOLPart_2", "text": "Il s'agit d'une version modifiée du célèbre automate cellulaire de John Conway. Dans cette version, on imagine des animaux et des végétaux plutôt que des cellules." },
-	{ "id": "GOLPart_3", "text": "Cette version était un excellent entraînement à la programmation orienté objet, à travers ce projet, j'ai pu appliquer mes connaissances sur les principes de l'orienté objet (encapsulation, héritage etc) et en même temps tester des nouveaux patterns de conception, dont l'Object Pooling." }
+	{ "id": "GOLPart_3", "text": "Cette version était un excellent entraînement à la programmation orienté objet, à travers ce projet, j'ai pu appliquer mes connaissances sur les principes de l'orienté objet (encapsulation, héritage etc) et en même temps tester des nouveaux patterns de conception, dont l'Object Pooling." },
+	{ "id": "UBGPart_1", "text": "Unity Binded Graphics (UBG) est une bibliothèque qui vous offre la possibilité de créer des éléments d'interface utilisateur simples qui affichent une valeur spécifique sélectionnée par l'utilisateur." },
+	{ "id": "UBGPart_2", "text": "Ce plugin utilise la réflexion et crée des méthodes génériques spécifiques au moment de l'exécution afin de connecter n'importe quel membre d'une classe MonoBehaviour à une interface utilisateur."},
+    { "id": "UBGPart_3", "text": "J'ai beaucoup appris à chaque étape du développement. Cet outil m'a offert l'opportunité d'étudier la création de méthodes au moment de l'exécution, les compilateurs AOT (Ahead of Time) et JIT (Just In Time), le rôle d'un linker et comment un compilateur élimine le code inutile pendant la compilation." }
   ]
 }
