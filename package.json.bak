@@ -1,5 +1,5 @@
 {
-  "homepage": "https://legertristan.github.io/",
+	
   "name": "portfolio_v4",
   "version": "0.1.0",
   "private": true,
@@ -26,8 +26,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+	"predeploy": "npm run build",
+	"deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -48,7 +48,6 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "gh-pages": "^6.0.0"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
 }
