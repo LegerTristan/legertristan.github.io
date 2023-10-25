@@ -105,7 +105,7 @@ function Portfolio() {
 
       <div className={`line ${selectedLineIndex === 4 ? 'Active' : ''}`}>
         <Popup title={"Site"} imgSrc={"/resources/visuels/SiteVisuel.png"} imgAlt={"Visual of my site"} videoSrc={null} 
-          onPopupActivate={() => setSelectedLineIndex(4))} onPopupDeactivate={() => setSelectedLineIndex(0)} joinRef={"https://github.com/LegerTristan/legertristan.github.io"}>
+          onPopupActivate={() => setSelectedLineIndex(4)} onPopupDeactivate={() => setSelectedLineIndex(0)} joinRef={"https://github.com/LegerTristan/legertristan.github.io"}>
             <p>
               {texts[20].text}<br/>
               {texts[21].text}
