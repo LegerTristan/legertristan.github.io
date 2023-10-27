@@ -7,6 +7,7 @@ import { darcula } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 import CaptionedFigure from '../captionedFigure/CaptionedFigure';
 import ImportantText from '../importantText/ImportantText';
+import TableContents from '../tableContents/TableContents';
 
 // ============== DATA =================
 import './PostReflection.css';
@@ -125,7 +126,9 @@ function PostReflection()
 
     return(
         <section className="postContent">
-            <h1>{texts[0].text}</h1> 
+            <h1 id="postReflection">{texts[0].text}</h1> 
+
+            <TableContents/>
 
             <p>{texts[1].text}</p>
             <CaptionedFigure 
@@ -142,7 +145,7 @@ function PostReflection()
             />
             <ImportantText text={texts[6].text}/>
 
-            <h2>{texts[7].text}</h2>
+            <h2 id="whatReflection">{texts[7].text}</h2>
             <p>
                 {texts[8].text}
                 <a href="https://learn.microsoft.com/en-us/dotnet/framework/reflection-and-codedom/reflection">
@@ -157,7 +160,7 @@ function PostReflection()
             <p>{texts[12].text}</p>
             <p>{texts[13].text}</p>
 
-            <h2>{texts[14].text}</h2>
+            <h2 id="pluginSetup">{texts[14].text}</h2>
             <p>{texts[15].text}</p>
             <ul>
                 <li>{texts[16].text}</li>
@@ -167,7 +170,7 @@ function PostReflection()
             <ImportantText text={texts[19].text}/>
             <p>{texts[20].text}</p>
 
-            <h2>{texts[21].text}</h2>
+            <h2 id="dataAccess">{texts[21].text}</h2>
             <p>{texts[22].text}</p>
             <p>{texts[23].text}</p>
             <ol>
@@ -191,7 +194,7 @@ function PostReflection()
                 captionText={texts[30].text}
             />
 
-            <h2>{texts[31].text}</h2>
+            <h2 id="dynamicCall">{texts[31].text}</h2>
             <p>{texts[32].text}</p>
             <p>{texts[33].text}</p>
             <p>{texts[34].text}</p>
@@ -208,7 +211,7 @@ function PostReflection()
             <p>{texts[40].text}</p>
 
 
-            <h2>{texts[41].text}</h2>
+            <h2 id="drawbacksReflection">{texts[41].text}</h2>
             <p>{texts[42].text}</p>
             <p>{texts[43].text}</p>
             <ul>
@@ -225,7 +228,7 @@ function PostReflection()
             <p>{texts[49].text}</p>
             <p>{texts[50].text}</p>
 
-            <h2>{texts[51].text}</h2>
+            <h2 id="createMethod">{texts[51].text}</h2>
             <p>{texts[52].text}</p>
             <SyntaxHighlighter language="csharp" style={darcula}>
                 {codeIRefValueWrapper}
@@ -246,7 +249,7 @@ function PostReflection()
                 </a>
             </ImportantText>
 
-            <h2>{texts[58].text}</h2>
+            <h2 id="createDelegate">{texts[58].text}</h2>
             <p>{texts[59].text}</p>
             <p>
                 {texts[60].text}
