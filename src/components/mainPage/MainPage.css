@@ -15,7 +15,7 @@
 }
 
 .section-dark {
-    background-color: #0f111a;
+    background-color: #0c0e14;
 }
 
 .section-container::before {
@@ -37,4 +37,34 @@
     margin-bottom: 60px;
     text-transform: uppercase;
     letter-spacing: 4px;
+}
+
+.posts-preview {
+    text-align: center;
+}
+
+.posts-preview p {
+    color: #888;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.btn-see-posts {
+    display: inline-block;
+    padding: 12px 30px;
+    background: transparent;
+    border: 2px solid #4da3ff;
+    color: #4da3ff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.btn-see-posts:hover {
+    background: #4da3ff;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(77, 163, 255, 0.4);
 }
