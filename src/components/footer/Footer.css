@@ -1,22 +1,29 @@
-hr
-{
-    border: 0;
-    border-top: 1px solid #61dafb;
-    margin-bottom: 20px;
-    margin-top: 20px;
+.main-footer {
+    width: 100%;
+    padding: 60px 5%;
+    background-color: #050505;
+    border-top: 1px solid #111;
+    box-sizing: border-box;
 }
 
-footer > p
-{
-    width: 80%;
-    line-height: 25px;
-    margin: 0% auto; /*Galère 3: Un simple margin: 0% auto et un width d'un percentage suffit à centrer*/
-    text-align: center;
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-@media (min-width: 721px) {
-    footer > p
-    {
-        width: 50%;
+.footer-content p {
+    color: #444;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+@media (max-width: 720px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
     }
 }

@@ -4,35 +4,78 @@ import languagesData from './LanguagesData';
 import LanguageContext from './LanguagesContext';
 import "./LanguagesDropdown.css";
 
-function LanguagesDropdown()
-{
+function LanguagesDropdown() {
     const { currentLanguage, setCurrentLanguage } = useContext(LanguageContext);
-    const [ texts, setTexts ] = useState(Array(100).fill({}));
+    const [texts, setTexts] = useState(Array(1).fill({}));
 
     useEffect(() => {
         fetch(process.env.PUBLIC_URL + "resources/json/LanguagesDropdown.json")
-        .then(response => response.json())
-        .then(data => setTexts(data[currentLanguage.value]))
-        .catch(error => console.error(error));
+            .then(response => response.json())
+            .then(data => setTexts(data[currentLanguage.value]))
+            .catch(error => console.error(error));
     }, [currentLanguage]);
 
-    const formatGroupLabel = (language) => (        // Galère 5: Même code qu'en dessous mais ça ne marchait pas avant :)
-        <div className="LanguageFlag">
+    const formatOptionLabel = (language) => (
+        <div className="LanguageFlagItem">
             <img src={language.img} alt={language.alt} />
         </div>
     );
 
-    return(
-        <div className="LanguagesDropdown">
-            <p>{texts[0].text}</p>
-            <Select
-                options={languagesData}
-                defaultValue={currentLanguage}
-                formatOptionLabel={formatGroupLabel}
-                onChange={(selectedOption) => setCurrentLanguage(selectedOption)}
-             />
+    const customStyles = {
+        control: (provided, state) => ({
+            ...provided,
+            backgroundColor: '#050505',
+            border: state.isFocused ? '1px solid #4da3ff' : '1px solid #1a1a1a',
+            boxShadow: 'none',
+            minHeight: '32px',
+            width: '65px',
+            cursor: 'pointer',
+            transition: '0.3s'
+        }),
+        menu: (provided) => ({
+            ...provided,
+            backgroundColor: '#0a0a0a',
+            border: '1px solid #1a1a1a',
+            width: '65px',
+            right: 0
+        }),
+        option: (provided, state) => ({
+            ...provided,
+            backgroundColor: state.isFocused ? '#1a1a1a' : 'transparent',
+            padding: '5px',
+            display: 'flex',
+            justifyContent: 'center',
+            cursor: 'pointer'
+        }),
+        valueContainer: (provided) => ({
+            ...provided,
+            padding: '0 5px'
+        }),
+        dropdownIndicator: (provided) => ({
+            ...provided,
+            padding: '2px',
+            color: '#444'
+        }),
+        indicatorSeparator: () => ({
+            display: 'none'
+        })
+    };
+
+    return (
+        <div className="LanguagesDropdownContainer">
+            <p className="LanguageLabelText">{texts[0]?.text}</p>
+            <div className="SelectWrapper">
+                <Select
+                    options={languagesData}
+                    defaultValue={currentLanguage}
+                    formatOptionLabel={formatOptionLabel}
+                    onChange={(selectedOption) => setCurrentLanguage(selectedOption)}
+                    styles={customStyles}
+                    isSearchable={false}
+                />
+            </div>
         </div>
-    )
+    );
 }
 
 export default LanguagesDropdown;

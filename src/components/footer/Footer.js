@@ -17,13 +17,12 @@ function Footer()
     }, [currentLanguage]);
 
     return(
-        <>
-            <hr/>
-            <footer>
-                <p>{year} - Copyright Tristan LEGER - {texts[0].text}</p>
+        <footer className="main-footer">
+            <div className="footer-content">
+                <p>{year} - Copyright Tristan LEGER - {texts[0]?.text}</p>
                 <LanguagesDropdown/>
-            </footer>
-        </>
+            </div>
+        </footer>
     )
 }
 

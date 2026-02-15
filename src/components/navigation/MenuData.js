@@ -1,15 +1,15 @@
  const menuData = [
     {
         textIndex: 0,
-        link: "/"
+        link: "/#about"
     },
     {
         textIndex: 1,
-        link: "/skills"
+        link: "/#portfolio"
     },
     {
         textIndex: 2,
-        link: "/portfolio"
+        link: "/#skills"
     },
     {
         textIndex: 3,
@@ -17,7 +17,7 @@
     },
     {
         textIndex: 4,
-        link: "/contacts"
+        link: "/#contact"
     }
   ]
 

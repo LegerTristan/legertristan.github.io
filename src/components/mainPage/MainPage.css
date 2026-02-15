@@ -15,7 +15,7 @@
 }
 
 .section-dark {
-    background-color: #080808;
+    background-color: #0f111a;
 }
 
 .section-container::before {
@@ -37,28 +37,4 @@
     margin-bottom: 60px;
     text-transform: uppercase;
     letter-spacing: 4px;
-}
-
-.posts-preview {
-    text-align: center;
-    background-color: #000;
-}
-
-.btn-see-posts {
-    display: inline-block;
-    margin-top: 2rem;
-    padding: 1rem 2rem;
-    background: transparent;
-    border: 1px solid #4da3ff;
-    color: #4da3ff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.btn-see-posts:hover {
-    background: #4da3ff;
-    color: white;
 }

@@ -29,7 +29,7 @@ function MainPage() {
         <Link to="/posts" className="btn-see-posts">View All Posts</Link>
       </section>
 
-      <section id="contact" className="section-container section-dark">
+      <section id="contact" className="section-container">
         <h2 className="section-title">Contact</h2>
         <Contacts />
       </section>

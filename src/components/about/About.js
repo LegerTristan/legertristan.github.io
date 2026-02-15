@@ -4,7 +4,7 @@ import './About.css';
 
 function About() {
   const { currentLanguage } = useContext(LanguageContext);
-  const [texts, setTexts] = useState(Array(30).fill({}));
+  const [texts, setTexts] = useState(Array(11).fill({}));
 
   useEffect(() => {
       fetch(process.env.PUBLIC_URL + "resources/json/About.json")
@@ -17,21 +17,28 @@ function About() {
     <>
       <header className="about-header">
         <h1>Tristan LEGER</h1>
-        <p>Gameplay Programmer | MSc Artificial Intelligence Student</p>
+        <p>{texts[6]?.text}</p>
       </header>
       <section className="about-container">
         <div className="about-layout">
             <article className="about-content">
                 <div className="bio-container">
                     <p>
-                        Passionné par la création numérique, je développe avec enthousiasme des outils et des mécaniques 
-                        pour le jeu vidéo. Mon expertise se situe à la jonction entre le <strong>Gameplay Programming</strong> 
-                        et l'<strong>Intelligence Artificielle</strong>.
+                        <strong>{texts[0]?.text}</strong>
+                    </p>
+                    <p>
+                        {texts[1]?.text}
+                    </p>
+                    <p>
+                        {texts[2]?.text}
+                    </p>
+                    <p>
+                        {texts[3]?.text}
                     </p>
                 </div>
                 
-                <div className="experiences-section">
-                    <h2 className="exp-title">Dernières Expériences</h2>
+                <div className="experiences-section info-card-flat">
+                    <h2 className="exp-title">{texts[7]?.text}</h2>
                     <div className="exp-grid-horizontal">
                         <div className="exp-item">
                             <strong>Gameplay Programmer</strong><br />X&Immersion
@@ -47,20 +54,20 @@ function About() {
             </article>
 
             <aside className="about-sidebar">
-                <div className="info-card-blue">
-                    <h3>Formation Actuelle</h3>
+                <div className="info-card-blue animate-load">
+                    <h3>{texts[8]?.text}</h3>
                     <p>Master of Science IA</p>
                     <span>SUPINFO (2024 - 2026)</span>
                 </div>
 
-                <div className="info-card-blue">
-                    <h3>Poste Actuel</h3>
+                <div className="info-card-blue animate-load">
+                    <h3>{texts[9]?.text}</h3>
                     <p>Gameplay Programmer</p>
                     <span>X&Immersion (Paris)</span>
                 </div>
 
-                <div className="info-card-blue">
-                    <h3>Top Skills</h3>
+                <div className="info-card-blue animate-load">
+                    <h3>{texts[10]?.text}</h3>
                     <div className="tags-compact">
                         <span>C++</span> <span>C#</span> <span>Python</span>
                         <span>Unreal</span> <span>Unity</span>

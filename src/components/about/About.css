@@ -1,8 +1,20 @@
+@keyframes slideUpFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .about-header {
     text-align: center;
     width: 100%;
     margin-top: 0px;
     margin-bottom: 50px;
+    animation: slideUpFade 0.6s ease-out forwards;
 }
 
 .about-header h1 {
@@ -34,23 +46,41 @@
 }
 
 .bio-container p {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     line-height: 1.8;
     color: #ccc;
     text-align: justify;
-    margin: 0;
+    margin-bottom: 20px;
+}
+
+.animate-load {
+    opacity: 0;
+    animation: slideUpFade 0.8s ease-out forwards;
+}
+
+.about-sidebar .animate-load:nth-child(1) { animation-delay: 0.2s; }
+.about-sidebar .animate-load:nth-child(2) { animation-delay: 0.4s; }
+.about-sidebar .animate-load:nth-child(3) { animation-delay: 0.6s; }
+
+.info-card-flat {
+    background: #050505;
+    padding: 25px;
+    border: 1px solid #151515;
+    border-radius: 4px;
+    opacity: 0;
+    animation: slideUpFade 0.8s ease-out 0.3s forwards;
 }
 
 .experiences-section {
-    margin-top: 60px;
+    margin-top: 40px;
     width: 100%;
 }
 
 .exp-title {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
-    color: #444;
-    margin-bottom: 30px;
+    color: #4da3ff;
+    margin-bottom: 25px;
     text-align: center;
     letter-spacing: 3px;
 }
@@ -63,7 +93,7 @@
 }
 
 .exp-item {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #888;
     line-height: 1.4;
     flex: 1;
@@ -85,6 +115,7 @@
     padding: 20px;
     border: 1px solid #151515;
     border-left: 3px solid #4da3ff;
+    border-radius: 4px;
 }
 
 .info-card-blue h3 {
@@ -125,9 +156,5 @@
 @media (max-width: 900px) {
     .about-layout {
         grid-template-columns: 1fr;
-    }
-    .exp-grid-horizontal {
-        flex-direction: column;
-        gap: 30px;
     }
 }
