@@ -16,24 +16,53 @@ function Portfolio() {
 
   const projects = [
     { 
-        title: "Dwarfender", 
-        img: "/resources/visuels/DwarfenderVisuel.png", 
-        video: "/resources/videos/DwarfenderTrailer.mp4", 
-        link: "https://store.steampowered.com/app/2386590/Dwarfender/", 
-        summary: texts[6]?.text,
-        details: <>{texts[7]?.text} <br/> {texts[8]?.text}</>
+        title: "Voice Converter", 
+        img: "/resources/visuels/UBGVisuel.jpg", 
+        summary: texts[28]?.text,
+        details: <>{texts[29]?.text} <br/> {texts[30]?.text}</>
     },
     { 
-        title: "AmongDefense", 
-        img: "/resources/visuels/AmongDefenseVisuel.png", 
-        summary: texts[3]?.text,
-        details: <>{texts[4]?.text} <br/> {texts[5]?.text}</>
+        title: "Ethermon", 
+        img: "/resources/visuels/EthermonVisuel.png", 
+        summary: texts[28]?.text,
+        details: <>{texts[29]?.text} <br/> {texts[30]?.text}</>
+    },
+    { 
+        title: "Diagen", 
+        img: "/resources/visuels/UBGVisuel.jpg", 
+        summary: texts[28]?.text,
+        details: <>{texts[29]?.text} <br/> {texts[30]?.text}</>
+    },
+    {
+        title: "Geppetto", 
+        video: "/resources/videos/GeppettoPresentation.mp4",
+        summary: texts[28]?.text,
+        details: <>{texts[29]?.text} <br/> {texts[30]?.text}</>
+    },
+    { 
+        title: "Outroad Fury", 
+        img: "/resources/visuels/UBGVisuel.jpg", 
+        summary: texts[28]?.text,
+        details: <>{texts[29]?.text} <br/> {texts[30]?.text}</>
     },
     { 
         title: "Unity Binded Graphics", 
         img: "/resources/visuels/UBGVisuel.jpg", 
         summary: texts[28]?.text,
         details: <>{texts[29]?.text} <br/> {texts[30]?.text}</>
+    },
+    { 
+        title: "Texture Combiner", 
+        img: "/resources/visuels/TextureCombinerVisuel.png", 
+        link: "https://github.com/LegerTristan/TextureCombiner", 
+        summary: texts[22]?.text,
+        details: <>{texts[23]?.text} <br/> {texts[24]?.text}</>
+    },
+    { 
+        title: "AmongDefense", 
+        img: "/resources/visuels/AmongDefenseVisuel.png", 
+        summary: texts[3]?.text,
+        details: <>{texts[4]?.text} <br/> {texts[5]?.text}</>
     },
     { 
         title: "Stress Test Pathfinding", 
@@ -43,6 +72,14 @@ function Portfolio() {
         details: <>{texts[1]?.text} <br/> {texts[2]?.text}</>
     },
     { 
+        title: "Dwarfender", 
+        img: "/resources/visuels/DwarfenderVisuel.png", 
+        video: "/resources/videos/DwarfenderTrailer.mp4", 
+        link: "https://store.steampowered.com/app/2386590/Dwarfender/", 
+        summary: texts[6]?.text,
+        details: <>{texts[7]?.text} <br/> {texts[8]?.text}</>
+    },
+    { 
         title: "Canon", 
         img: "/resources/visuels/CanonVisuel.png", 
         link: "https://github.com/LegerTristan/Cannon", 
@@ -50,12 +87,11 @@ function Portfolio() {
         details: <>{texts[16]?.text} <br/> {texts[17]?.text}</>
     },
     { 
-        title: "Texture Combiner", 
-        img: "/resources/visuels/TextureCombinerVisuel.png", 
-        link: "https://github.com/LegerTristan/TextureCombiner", 
-        summary: texts[22]?.text,
-        details: <>{texts[23]?.text} <br/> {texts[24]?.text}</>
-    }
+        title: "SYRA", 
+        img: "/resources/visuels/SYRAVisuel.jpg", 
+        summary: texts[6]?.text,
+        details: <>{texts[7]?.text} <br/> {texts[8]?.text}</>
+    },
   ];
 
   return (
