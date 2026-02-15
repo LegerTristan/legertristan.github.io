@@ -1,12 +1,10 @@
 import React, { useState, useEffect, useContext } from 'react'
 import LanguageContext from '../languagesDropdown/LanguagesContext';
-import DropdownText from '../dropdownTexts/DropdownText';
 import './About.css';
 
 function About() {
-
   const { currentLanguage } = useContext(LanguageContext);
-  const [texts, setTexts] = useState(Array(100).fill({}));
+  const [texts, setTexts] = useState(Array(30).fill({}));
 
   useEffect(() => {
       fetch(process.env.PUBLIC_URL + "resources/json/About.json")
@@ -16,24 +14,63 @@ function About() {
   }, [currentLanguage]);
 
   return (
-      <section className="about">
-        <article className="ddTextContainer">
-          <DropdownText title={texts[0].text}>
-          <p className="ddContent" key={texts[1].id}>{texts[1].text}<br />
-                {texts[2].text}<br/>
-                {texts[3].text}</p>
-          </DropdownText>
+    <>
+      <header className="about-header">
+        <h1>Tristan LEGER</h1>
+        <p>Gameplay Programmer | MSc Artificial Intelligence Student</p>
+      </header>
+      <section className="about-container">
+        <div className="about-layout">
+            <article className="about-content">
+                <div className="bio-container">
+                    <p>
+                        Passionné par la création numérique, je développe avec enthousiasme des outils et des mécaniques 
+                        pour le jeu vidéo. Mon expertise se situe à la jonction entre le <strong>Gameplay Programming</strong> 
+                        et l'<strong>Intelligence Artificielle</strong>.
+                    </p>
+                </div>
+                
+                <div className="experiences-section">
+                    <h2 className="exp-title">Dernières Expériences</h2>
+                    <div className="exp-grid-horizontal">
+                        <div className="exp-item">
+                            <strong>Gameplay Programmer</strong><br />X&Immersion
+                        </div>
+                        <div className="exp-item">
+                            <strong>AI Programmer</strong><br />Outroad Fury
+                        </div>
+                        <div className="exp-item">
+                            <strong>Gameplay Programmer</strong><br />Dwarfender
+                        </div>
+                    </div>
+                </div>
+            </article>
 
-          <DropdownText title={texts[4].text}>
-          <p className="ddContent" key={texts[5].id}>{texts[5].text}<br />
-                    {texts[6].text}</p>
-          </DropdownText>
+            <aside className="about-sidebar">
+                <div className="info-card-blue">
+                    <h3>Formation Actuelle</h3>
+                    <p>Master of Science IA</p>
+                    <span>SUPINFO (2024 - 2026)</span>
+                </div>
 
-          <DropdownText title={texts[7].text}>
-          <p className="ddContent" key={texts[8].id}>{texts[8].text}</p>
-          </DropdownText>
-        </article>
+                <div className="info-card-blue">
+                    <h3>Poste Actuel</h3>
+                    <p>Gameplay Programmer</p>
+                    <span>X&Immersion (Paris)</span>
+                </div>
+
+                <div className="info-card-blue">
+                    <h3>Top Skills</h3>
+                    <div className="tags-compact">
+                        <span>C++</span> <span>C#</span> <span>Python</span>
+                        <span>Unreal</span> <span>Unity</span>
+                        <span>AI / ML</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
       </section>
+    </>
   );
 }
 

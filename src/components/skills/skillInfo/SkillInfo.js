@@ -1,37 +1,23 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import './SkillInfo.css';
 
 function SkillInfo({title, imgSrc, imgAlt, dsc}) {
-    const [isTriggered, SetIsTriggered] = useState(false);
-    const [triggeredAtLeastOnce, SetTriggeredAtLeastOnce] = useState(false);
-    const container = useRef(null);
-
-    const getRandomDuration = () =>
-    {
-        return (Math.random() * 3) + 5 + 's';
-    }
-
-    const UpdateTriggerState = () =>
-    {
-        SetTriggeredAtLeastOnce(true);
-        SetIsTriggered(!isTriggered);
-    }
-
-    useEffect(() => 
-    {
-       if(!container)
-            return; 
-
-        container.current.style.animationDuration = getRandomDuration();
-    }, [])
+    const [isExpanded, setIsExpanded] = useState(false);
 
     return (
-        <div className='skillInfo' ref={container}>
-            <img src={imgSrc} alt={imgAlt} onClick={UpdateTriggerState} />
-            <h2>{title}</h2>
-            {
-                triggeredAtLeastOnce ? <p className={isTriggered ? 'visibleSkillDsc' : 'hiddenSkillDsc'}>{dsc}</p> : ""
-            }
+        <div className={`skill-item-row ${isExpanded ? 'active' : ''}`} onClick={() => setIsExpanded(!isExpanded)}>
+            <div className="skill-item-header">
+                <div className="skill-icon-wrapper">
+                    <img src={imgSrc} alt={imgAlt} />
+                </div>
+                <span className="skill-name">{title}</span>
+                <span className={`skill-arrow ${isExpanded ? 'up' : 'down'}`}></span>
+            </div>
+            {isExpanded && (
+                <div className="skill-description-panel">
+                    <p>{dsc}</p>
+                </div>
+            )}
         </div>
     );
 }

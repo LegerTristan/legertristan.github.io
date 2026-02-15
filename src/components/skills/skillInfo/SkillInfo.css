@@ -1,64 +1,70 @@
-.skillInfo
-{
-    flex-basis: 33.333%;
-    padding-bottom: 2.5rem;
-    animation: 5s infinite linear Float;
-}
-
-.skillInfo img
-{
-    width: 20%;
-    height: 20%;
-}
-
-.skillInfo img:hover
-{
+.skill-item-row {
+    background: #050505;
+    border: 1px solid #151515;
+    border-radius: 4px;
     cursor: pointer;
+    transition: border-color 0.3s, background 0.3s;
 }
 
-.skillInfo h2
-{
-    font-size: large;
+.skill-item-row:hover {
+    border-color: #333;
+    background: #080808;
 }
 
-.visibleSkillDsc
-{
-    animation: 0.3s 1 linear forwards slideFadeInTop;
+.skill-item-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    gap: 15px;
 }
 
-.hiddenSkillDsc
-{
-    animation: 0.3s 1 linear forwards slideFadeOutBottom;
+.skill-icon-wrapper {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-@keyframes Float
-{
-    0% 
-    {
-      transform: translateY(-5%);
-    }
-    50% 
-    {
-        transform: translateY(5%);
-    }
-    100% 
-    {
-        transform: translateY(-5%);
-    }
+.skill-icon-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
 }
 
-@media screen and (max-width: 1280px) 
-{
-    .skillInfo h2
-    {
-        font-size: medium;
-    }
+.skill-item-row:hover .skill-icon-wrapper img {
+    filter: grayscale(0%);
 }
 
-@media screen and (max-width: 720px) 
-{
-    .skillInfo h2
-    {
-        font-size: small;
-    }
+.skill-name {
+    flex-grow: 1;
+    font-size: 0.9rem;
+    color: #ccc;
+    font-weight: 500;
+}
+
+.skill-arrow {
+    width: 8px;
+    height: 8px;
+    border-right: 1px solid #444;
+    border-bottom: 1px solid #444;
+    transform: rotate(45deg);
+    transition: transform 0.3s;
+}
+
+.skill-arrow.up {
+    transform: rotate(-135deg);
+}
+
+.skill-description-panel {
+    padding: 0 15px 15px 60px;
+    font-size: 0.85rem;
+    color: #888;
+    line-height: 1.5;
+}
+
+.skill-item-row.active {
+    border-color: #4da3ff;
 }

@@ -1,6 +1,15 @@
-.skills
-{
-    flex-direction: column;
-    margin: 0%;
-    background: linear-gradient(#001d1b, #007c73);
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1024px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
 }

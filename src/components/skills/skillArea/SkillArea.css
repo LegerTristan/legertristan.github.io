@@ -1,39 +1,22 @@
-.skills article
-{
-    padding: 1% 0% 3% 0%;
+.skill-category-block {
+    background: #0a0a0a;
+    border: 1px solid #1a1a1a;
+    border-top: 3px solid #4da3ff;
+    padding: 25px;
+    border-radius: 4px;
 }
 
-.skills h1
-{
-    font-size: larger;
+.category-header h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
-.skills hr
-{
-    margin: 2rem 0rem 2rem 0rem;
-}
-
-.skillsFarm
-{
+.skills-items-container {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    margin: 0% 1%;
-}
-
-@media screen and (max-width: 720px) 
-{
-    .skills h1
-    {
-        font-size: large;
-    }
-}
-
-@media screen and (min-width: 720px) 
-{
-    .skillsFarm
-    {
-        margin: 0% 5%;
-    }
+    flex-direction: column;
+    gap: 15px;
 }

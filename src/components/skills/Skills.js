@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useContext } from 'react'
 import LanguageContext from '../languagesDropdown/LanguagesContext';
 import SkillArea from './skillArea/SkillArea';
@@ -17,10 +16,12 @@ function Skills() {
   }, [currentLanguage]);
 
   return (
-    <section className="skills">
+    <section className="skills-grid">
       {
         Array.isArray(skillsAreaData) && 
-        skillsAreaData.map((skillAreaData) => (<SkillArea key={skillAreaData.titleIndex} areaData={skillAreaData} texts={texts}/>))
+        skillsAreaData.map((skillAreaData) => (
+            <SkillArea key={skillAreaData.titleIndex} areaData={skillAreaData} texts={texts}/>
+        ))
       }
     </section>
   );

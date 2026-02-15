@@ -1,0 +1,64 @@
+.main-page {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.section-container {
+    padding: 2em 5% 8em 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+    margin: 0px;
+}
+
+.section-dark {
+    background-color: #080808;
+}
+
+.section-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #4da3ff, transparent);
+}
+
+.section-title {
+    text-align: center;
+    width: 100%;
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.posts-preview {
+    text-align: center;
+    background-color: #000;
+}
+
+.btn-see-posts {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background: transparent;
+    border: 1px solid #4da3ff;
+    color: #4da3ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-see-posts:hover {
+    background: #4da3ff;
+    color: white;
+}

@@ -1,32 +1,33 @@
-nav
-{
-    background-color: black;
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #0a0a0a;
+    border-bottom: 1px solid #1a1a1a;
+    width: 100%;
 }
 
-ul
-{
+nav ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     list-style: none;
-    margin: 0px;
-    padding: 1.5% 0%;
-    font-size: x-large;
+    margin: 0;
+    padding: 1.5em 0; 
 }
 
-nav a             /* Galère 2: Le display: flex annule les modifs sur le transform (donc pas de transform: scale())*/
-{
-    color: white;
+nav ul li {
+    margin: 0 5em; 
+}
+
+nav ul li a {
+    color: #fff;
     text-decoration: none;
-    transition: .3s;
-    transform-origin: initial;
-    display: inline-block;
-    -webkit-transform: scale(1); /* Chrome, Safari, Opera */
-    transform: scale(1);
+    font-size: 1.1rem; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s;
 }
 
-.link:hover
-{
-    -webkit-transform: scale(1.2); /* Chrome, Safari, Opera */
-    transform: scale(1.2); 
-    color: #61dafb;
+nav ul li a:hover {
+    color: #4da3ff;
 }

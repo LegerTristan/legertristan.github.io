@@ -1,46 +1,133 @@
-.about
-{
-    display: block;
-    margin: 1% 2%;
+.about-header {
+    text-align: center;
+    width: 100%;
+    margin-top: 0px;
+    margin-bottom: 50px;
 }
 
-.about h1
-{
-    font-size: large;
-    outline-width: 1px;
-    outline-color: black;
+.about-header h1 {
+    font-size: 3.5rem;
+    color: #fff;
+    margin: 0;
 }
 
-.ddContent
-{
-    margin-left: 0%;
-    margin: 0% 5% 0% 0%;
-    line-height: 25px;
+.about-header p {
+    font-size: 1.1rem;
+    color: #4da3ff;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.about-container {
+    max-width: 100%;
+    width: 1100px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.about-layout {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.bio-container p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #ccc;
     text-align: justify;
+    margin: 0;
 }
 
-.ddTextContainer
-{
-    padding-bottom: 2%;
+.experiences-section {
+    margin-top: 60px;
+    width: 100%;
 }
 
-.ddTextContainer > .ddText
-{
-    padding-top: 2%;
+.exp-title {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #444;
+    margin-bottom: 30px;
+    text-align: center;
+    letter-spacing: 3px;
 }
 
-@media screen and (max-width: 1280px) 
-{
-    .about p
-    {
-        font-size: large;
+.exp-grid-horizontal {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.exp-item {
+    font-size: 0.9rem;
+    color: #888;
+    line-height: 1.4;
+    flex: 1;
+}
+
+.exp-item strong {
+    color: #fff;
+    font-weight: 500;
+}
+
+.about-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.info-card-blue {
+    background: #050505;
+    padding: 20px;
+    border: 1px solid #151515;
+    border-left: 3px solid #4da3ff;
+}
+
+.info-card-blue h3 {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: #4da3ff;
+    margin: 0 0 8px 0;
+    letter-spacing: 1px;
+}
+
+.info-card-blue p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+}
+
+.info-card-blue span {
+    font-size: 0.8rem;
+    color: #555;
+}
+
+.tags-compact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.tags-compact span {
+    font-size: 0.65rem;
+    background: #111;
+    padding: 3px 8px;
+    color: #777;
+    border: 1px solid #222;
+}
+
+@media (max-width: 900px) {
+    .about-layout {
+        grid-template-columns: 1fr;
     }
-
-    .about h1
-    {
-        font-size: medium;
-        outline-width: 1px;
-        outline-color: black;
-        text-align: left;
+    .exp-grid-horizontal {
+        flex-direction: column;
+        gap: 30px;
     }
 }
