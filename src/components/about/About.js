@@ -9,22 +9,20 @@ function About() {
     <>
       <header className="about-header">
         <h1>Tristan LEGER</h1>
-        <p>{texts[6]?.text}</p>
+        <p>{texts.Subtitle}</p>
       </header>
       <section className="about-container">
         <div className="about-layout">
             <article className="about-content">
                 <div className="bio-container">
-                    <p>
-                        <strong>{texts[0]?.text}</strong>
-                    </p>
-                    <p>{texts[1]?.text}</p>
-                    <p>{texts[2]?.text}</p>
-                    <p>{texts[3]?.text}</p>
+                    <p><strong>{texts.Catchphrase}</strong></p>
+                    <p>{texts.Bio_1}</p>
+                    <p>{texts.Bio_2}</p>
+                    <p>{texts.Bio_3}</p>
                 </div>
                 
                 <div className="experiences-section info-card-flat">
-                    <h2 className="exp-title">{texts[7]?.text}</h2>
+                    <h2 className="exp-title">{texts.ExpTitle_Repeat}</h2>
                     <div className="exp-grid-horizontal">
                         <div className="exp-item">
                             <strong>Gameplay Programmer</strong><br />X&Immersion<br />
@@ -44,19 +42,19 @@ function About() {
 
             <aside className="about-sidebar">
                 <div className="info-card-blue animate-load">
-                    <h3>{texts[8]?.text}</h3>
+                    <h3>{texts.Formation_Title}</h3>
                     <p>Master of Science IA</p>
                     <span>SUPINFO (2024 - 2026)</span>
                 </div>
 
                 <div className="info-card-blue animate-load">
-                    <h3>{texts[9]?.text}</h3>
+                    <h3>{texts.Position_Title}</h3>
                     <p>Gameplay Programmer</p>
                     <span>X&Immersion (Paris)</span>
                 </div>
 
                 <div className="info-card-blue animate-load">
-                    <h3>{texts[10]?.text}</h3>
+                    <h3>{texts.Skills_Title}</h3>
                     <div className="tags-compact">
                         <span>C++</span> <span>C#</span> <span>Python</span>
                         <span>Unreal</span> <span>Unity</span>

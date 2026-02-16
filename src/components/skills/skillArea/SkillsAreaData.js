@@ -1,56 +1,56 @@
 class SkillInfo 
 {
-    constructor(titleIndex, imageSrc, imageAlt, descriptionIndex) 
+    constructor(titleId, imageSrc, imageAlt, descId) 
     {
-        this.titleIndex = titleIndex;
+        this.titleId = titleId;
         this.imageSrc = imageSrc;
         this.imageAlt = imageAlt;
-        this.descriptionIndex = descriptionIndex;
+        this.descId = descId;
     }
 }
 
 const skillsAreaData = 
 [
     {
-        titleIndex: 0,
+        titleId: "Cat1",
         infos: [
-            new SkillInfo(1, "resources/icons/iconUnreal.png", "Unreal icon", 2), 
-            new SkillInfo(3, "resources/icons/iconUnity.png", "Unity icon", 4), 
-            new SkillInfo(5, "resources/icons/iconAI.png", "AI icon", 6), 
-            new SkillInfo(11, "resources/icons/MachineLearningIcon.png", "Machine Learning icon", 12),
-            new SkillInfo(7, "resources/icons/iconTools.png", "Tools icon", 8), 
-            new SkillInfo(9, "resources/icons/iconGestionProjet.png", "Project Management icon", 10),
-            new SkillInfo(35, "resources/icons/CanvaIcon.png", "Canva icon", 36),
-            new SkillInfo(37, "resources/icons/MiroIcon.png", "Miro icon", 38), 
-            new SkillInfo(39, "resources/icons/TrelloIcon.png", "Trello icon", 40), 
-            new SkillInfo(41, "resources/icons/SKLearnIcon.png", "Sci-Kit learn icon", 42), 
-            new SkillInfo(13, "resources/icons/iconFlagFR.jpg", "french flag icon", 14)
+            new SkillInfo("UE", "resources/icons/iconUnreal.png", "Unreal icon", "UEDsc"), 
+            new SkillInfo("Unity", "resources/icons/iconUnity.png", "Unity icon", "UnityDsc"), 
+            new SkillInfo("AI", "resources/icons/iconAI.png", "AI icon", "AIDsc"), 
+            new SkillInfo("ML", "resources/icons/MachineLearningIcon.png", "Machine Learning icon", "MLDsc"),
+            new SkillInfo("Tools", "resources/icons/iconTools.png", "Tools icon", "ToolsDsc"), 
+            new SkillInfo("Mgmt", "resources/icons/iconGestionProjet.png", "Project Management icon", "MgmtDsc"),
+            new SkillInfo("Canva", "resources/icons/CanvaIcon.png", "Canva icon", "CanvaDsc"),
+            new SkillInfo("Miro", "resources/icons/MiroIcon.png", "Miro icon", "MiroDsc"), 
+            new SkillInfo("Trello", "resources/icons/TrelloIcon.png", "Trello icon", "TrelloDsc"), 
+            new SkillInfo("SKLearn", "resources/icons/SKLearnIcon.png", "Sci-Kit learn icon", "SKLearnDsc"), 
+            new SkillInfo("FR", "resources/icons/iconFlagFR.jpg", "french flag icon", "FRDsc")
         ]
     },
     {
-        titleIndex: 15,
+        titleId: "Cat2",
         infos: [
-            new SkillInfo(43, "resources/icons/BlockchainIcon.png", "Blockchain icon", 44), 
-            new SkillInfo(45, "resources/icons/HardhatIcon.png", "Hardhat icon", 46), 
-            new SkillInfo(47, "resources/icons/ClickUpIcon.png", "ClickUp icon", 48), 
-            new SkillInfo(49, "resources/icons/HLSLIcon.png", "HLSL icon", 50), 
-            new SkillInfo(51, "resources/icons/iconStarUML.png", "StarUML icon", 52),
-            new SkillInfo(16, "resources/icons/icon3C.png", "3C icon", 17), 
-            new SkillInfo(20, "resources/icons/iconAndroid.png", "Android icon", 21), 
-            new SkillInfo(22, "resources/icons/iconUI.png", "UI icon", 23), 
-            new SkillInfo(24, "resources/icons/iconFlagEN.jpg", "English flag icon", 25)
+            new SkillInfo("BC", "resources/icons/BlockchainIcon.png", "Blockchain icon", "BCDsc"), 
+            new SkillInfo("HH", "resources/icons/HardhatIcon.png", "Hardhat icon", "HHDsc"), 
+            new SkillInfo("CU", "resources/icons/ClickUpIcon.png", "ClickUp icon", "CUDsc"), 
+            new SkillInfo("HLSL", "resources/icons/HLSLIcon.png", "HLSL icon", "HLSLDsc"), 
+            new SkillInfo("UML", "resources/icons/iconStarUML.png", "StarUML icon", "UMLDsc"),
+            new SkillInfo("3C", "resources/icons/icon3C.png", "3C icon", "3CDsc"), 
+            new SkillInfo("Android", "resources/icons/iconAndroid.png", "Android icon", "AndroidDsc"), 
+            new SkillInfo("UI", "resources/icons/iconUI.png", "UI icon", "UIDsc"), 
+            new SkillInfo("EN", "resources/icons/iconFlagEN.jpg", "English flag icon", "ENDsc")
         ]
     },
     {
-        titleIndex: 26,
+        titleId: "Cat3",
         infos: [
-            new SkillInfo(18, "resources/icons/iconARCore.png", "ARCore icon", 19),
-            new SkillInfo(27, "resources/icons/iconVR.png", "VR icon", 28), 
-            new SkillInfo(29, "resources/icons/iconBlender.png", "Blender icon", 30), 
-            new SkillInfo(53, "resources/icons/PhotoshopIcon.png", "Photoshop icon", 54),
-            new SkillInfo(55, "resources/icons/PostmanIcon.png", "Postman icon", 56), 
-            new SkillInfo(31, "resources/icons/iconWeb.png", "Web icon", 32), 
-            new SkillInfo(33, "resources/icons/iconFlagDE.png", "Deutsch flag icon", 34)
+            new SkillInfo("AR", "resources/icons/iconARCore.png", "ARCore icon", "ARDsc"),
+            new SkillInfo("VR", "resources/icons/iconVR.png", "VR icon", "VRDsc"), 
+            new SkillInfo("Blender", "resources/icons/iconBlender.png", "Blender icon", "BlenderDsc"), 
+            new SkillInfo("PS", "resources/icons/PhotoshopIcon.png", "Photoshop icon", "PSDsc"),
+            new SkillInfo("PM", "resources/icons/PostmanIcon.png", "Postman icon", "PMDsc"), 
+            new SkillInfo("Web", "resources/icons/iconWeb.png", "Web icon", "WebDsc"), 
+            new SkillInfo("DE", "resources/icons/iconFlagDE.png", "Deutsch flag icon", "DEDsc")
         ]
     }
 ];

@@ -1,24 +1,24 @@
- const menuData = [
+const menuData = [
     {
-        textIndex: 0,
+        titleId: "AboutTitle",
         link: "/#about"
     },
     {
-        textIndex: 1,
+        titleId: "ProjectsTitle",
         link: "/#portfolio"
     },
     {
-        textIndex: 2,
+        titleId: "SkillsTitle",
         link: "/#skills"
     },
     {
-        textIndex: 3,
+        titleId: "PostsTitle",
         link: "/posts"
     },
     {
-        textIndex: 4,
+        titleId: "ContactTitle",
         link: "/#contact"
     }
-  ]
+];
 
-  export default menuData;
+export default menuData;

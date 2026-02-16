@@ -1,19 +1,10 @@
-import React, { useState, useEffect, useContext } from 'react'
-import LanguageContext from '../languagesDropdown/LanguagesContext';
+import useTranslation from '../../hooks/useTranslation';
 import SkillArea from './skillArea/SkillArea';
 import skillsAreaData from './skillArea/SkillsAreaData';
 import './Skills.css';
 
 function Skills() {
-  const { currentLanguage } = useContext(LanguageContext);
-  const [texts, setTexts] = useState(Array(100).fill({}));
-
-  useEffect(() => {
-      fetch(process.env.PUBLIC_URL + "resources/json/Skills.json")
-      .then(response => response.json())
-      .then(data => setTexts(data[currentLanguage.value]))
-      .catch(error => console.error(error));
-  }, [currentLanguage]);
+  const texts = useTranslation('Skills');
 
   return (
     <section className="skills-grid">

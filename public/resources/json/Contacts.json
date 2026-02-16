@@ -1,12 +1,12 @@
 {
-  "english": [
-    { "id": "gmail", "text": "I am available for any job offer, project request, or general technical inquiries." },
-    { "id": "itchIo", "text": "Discover my interactive prototypes and game jam projects on my official itch.io page." },
-    { "id": "linkedin", "text": "Explore my detailed professional background and connect with me on LinkedIn." }
-  ],
-  "french": [
-    { "id": "gmail", "text": "Je suis disponible pour toute proposition d'emploi, demande de projet ou simple renseignement technique." },
-    { "id": "itchIo", "text": "Découvrez mes prototypes interactifs et mes projets de game jam sur ma page itch.io." },
-    { "id": "linkedin", "text": "Retrouvez l'intégralité de mon parcours professionnel et discutons sur LinkedIn." }
-  ]
+  "english": {
+    "gmail": "I am available for any job offer, project request, or general technical inquiries.",
+    "itchIo": "Discover my interactive prototypes and game jam projects on my official itch.io page.",
+    "linkedin": "Explore my detailed professional background and connect with me on LinkedIn."
+  },
+  "french": {
+    "gmail": "Je suis disponible pour toute proposition d'emploi, demande de projet ou simple renseignement technique.",
+    "itchIo": "Découvrez mes prototypes interactifs et mes projets de game jam sur ma page itch.io.",
+    "linkedin": "Retrouvez l'intégralité de mon parcours professionnel et discutons sur LinkedIn."
+  }
 }

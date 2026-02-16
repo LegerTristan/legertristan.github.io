@@ -57,7 +57,7 @@ function LanguagesDropdown() {
 
     return (
         <div className="LanguagesDropdownContainer">
-            <p className="LanguageLabelText">{texts[0]?.text}</p>
+            <p className="LanguageLabelText">{texts.language}</p>
             <div className="SelectWrapper">
                 <Select
                     options={languagesData}

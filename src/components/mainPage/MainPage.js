@@ -27,9 +27,9 @@ function MainPage() {
       </section>
 
       <section id="posts-preview" className="section-container section-dark posts-preview">
-        <h2 className="section-title">{texts[0]?.text}</h2>
-        <p>{texts[1]?.text}</p>
-        <Link to="/posts" className="btn-see-posts">{texts[2]?.text}</Link>
+        <h2 className="section-title">{texts.BlogTitle}</h2>
+        <p>{texts.BlogSubtitle}</p>
+        <Link to="/posts" className="btn-see-posts">{texts.BlogBtn}</Link>
       </section>
 
       <section id="contact" className="section-container">

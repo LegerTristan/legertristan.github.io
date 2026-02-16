@@ -1,12 +1,12 @@
 {
-  "english": [
-    { "id": "P_Reflection_Title", "text": "Using Reflection to Generate Code Dynamically." },
-	{ "id": "P_Reflection_Date", "text": "Oct. 17 2023" },
-	{ "id": "P_Reflection_Description", "text": "We will see how to dynamically create generic methods and delegates based on a type that we will also retrieve through reflection !" }
-  ],
-  "french": [
-    { "id": "P_Reflection_Title", "text": "Utiliser la réflexion pour produire du code dynamiquement." },
-	{ "id": "P_Reflection_Date", "text": "17 Oct. 2023" },
-	{ "id": "P_Reflection_Description", "text": "On va voir comment créer dynamiquement des méthodes génériques et des delegates à partir d'une type qu'on va récupérer par réflexion également !" }
-  ]
+  "english": {
+    "P_Reflection_Title": "Using Reflection to Generate Code Dynamically.",
+    "P_Reflection_Date": "Oct. 17 2023",
+    "P_Reflection_Description": "We will see how to dynamically create generic methods and delegates based on a type that we will also retrieve through reflection!"
+  },
+  "french": {
+    "P_Reflection_Title": "Utiliser la réflexion pour produire du code dynamiquement.",
+    "P_Reflection_Date": "17 Oct. 2023",
+    "P_Reflection_Description": "On va voir comment créer dynamiquement des méthodes génériques et des delegates à partir d'un type récupéré par réflexion !"
+  }
 }

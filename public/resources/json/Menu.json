@@ -1,16 +1,16 @@
 {
-  "english": [
-    { "id": "AboutTitle", "text": "About" },
-    { "id": "ProjectsTitle", "text": "Portfolio" },
-    { "id": "SkillsTitle", "text": "Skills" },
-    { "id": "PostsTitle", "text": "Posts" },
-    { "id": "ContactTitle", "text": "Contacts" }
-  ],
-  "french": [
-    { "id": "AboutTitle", "text": "À propos" },
-    { "id": "ProjectsTitle", "text": "Portfolio" },
-    { "id": "SkillsTitle", "text": "Compétences" },
-    { "id": "PostsTitle", "text": "Posts" },
-    { "id": "ContactTitle", "text": "Contacts" }
-  ]
+  "english": {
+    "AboutTitle": "About",
+    "ProjectsTitle": "Portfolio",
+    "SkillsTitle": "Skills",
+    "PostsTitle": "Posts",
+    "ContactTitle": "Contacts"
+  },
+  "french": {
+    "AboutTitle": "À propos",
+    "ProjectsTitle": "Portfolio",
+    "SkillsTitle": "Compétences",
+    "PostsTitle": "Posts",
+    "ContactTitle": "Contacts"
+  }
 }

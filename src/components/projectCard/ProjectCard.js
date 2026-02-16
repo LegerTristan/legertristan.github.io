@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import './ProjectCard.css';
 
 function ProjectCard({ title, imgSrc, videoSrc, summary, details, joinRef }) {

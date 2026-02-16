@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './SkillInfo.css';
 
-function SkillInfo({title, imgSrc, imgAlt, dsc}) {
+function SkillInfo({ title, imgSrc, imgAlt, dsc }) {
     const [isExpanded, setIsExpanded] = useState(false);
 
     return (
