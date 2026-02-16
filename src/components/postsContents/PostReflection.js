@@ -1,28 +1,15 @@
-import React, { useState, useContext, useEffect } from 'react';
-import LanguageContext from '../languagesDropdown/LanguagesContext';
+import React from 'react';
+import useTranslation from '../../hooks/useTranslation';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { darcula } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-
-// ============== COMPONENTS =================
-
 import CaptionedFigure from '../captionedFigure/CaptionedFigure';
 import ImportantText from '../importantText/ImportantText';
 import TableContents from '../tableContents/TableContents';
-
-// ============== DATA =================
 import './PostReflection.css';
 
 function PostReflection()
 {  
-    const { currentLanguage } = useContext(LanguageContext);
-    const [texts, setTexts] = useState(Array(100).fill({}));
-
-    useEffect(() => {
-    fetch(process.env.PUBLIC_URL + "resources/json/Post_Reflection.json")
-    .then(response => response.json())
-    .then(data => setTexts(data[currentLanguage.value]))
-    .catch(error => console.error(error));
-    }, [currentLanguage]);
+    const texts = useTranslation('PostReflection');
 
     const codeInspectData = `
     MemberInfo[] SelectAvailableMethods()
@@ -88,8 +75,6 @@ function PostReflection()
     
     void CreateIntMethod()
     {
-        // We get our generic method called "GenericMethod",
-        // then we create a new method that take an int based on this generic method.
         MethodInfo _genericMethod = GetType().GetMethod("GenericMethod", BindingFlags.Instance | BindingFlags.NonPublic);
         MethodInfo _newIntMethod = _genericMethod?.MakeGenericMethod(new Type[] { typeof(int) });
     }
@@ -98,17 +83,12 @@ function PostReflection()
     const codeCreateDynamicFinal = `
     void InitGetterValueBinding()
     {
-        // Extract getter method and value’s type of the MemberInfo.
         MethodInfo _methodInfo = ReflectionUtils.ExtractGetMethod(memberValue);
         selectedType = ReflectionUtils.ExtractType(_ memberValue);
 
-        // Make a new generic method with the specific selected type based on 
-        CreateRefValueWrapper method.
         MethodInfo _createRefValueMethod = typeof(BindedGraphic).GetMethod(CREATE_REF_VALUE_WRAPPER, ReflectionUtils.AllBindings);
         MethodInfo _genericCreateRefValueMethod = _createRefValueMethod.MakeGenericMethod(new Type[] { selectedType });
 
-        // Finally, bind the get method to the IRefValueWrapper through
-        // the customized method CreateRefValueWrapper.
         object _wrapper = _genericCreateRefValueMethod.Invoke(this, new object[] { monoBehaviourReference, _methodInfo });
         wrapper = (IRefValueWrapper)_wrapper;
     }
@@ -126,147 +106,147 @@ function PostReflection()
 
     return(
         <section className="postContent">
-            <h1 id="postReflection">{texts[0].text}</h1> 
+            <h1 id="postReflection">{texts.P_Reflection_Title}</h1> 
 
             <TableContents/>
 
-            <p>{texts[1].text}</p>
+            <p>{texts.P_Reflection_Part1}</p>
             <CaptionedFigure 
                 imgSrc={"resources/visuels/posts/reflection/Post_Reflexion_A.jpg"} 
                 imgAlt={"Visual of two games using user interfaces."} 
-                captionText={texts[2].text}
+                captionText={texts.P_Reflection_Caption1}
             />
-            <p>{texts[3].text}</p>
-            <p>{texts[4].text}</p>
+            <p>{texts.P_Reflection_Part2}</p>
+            <p>{texts.P_Reflection_Part3}</p>
             <CaptionedFigure 
                 imgSrc={"resources/visuels/UBGVisuel.jpg"} 
                 imgAlt={"Banner of UnityBindedGraphics."} 
-                captionText={texts[5].text}
+                captionText={texts.P_Reflection_Caption2}
             />
-            <ImportantText text={texts[6].text}/>
+            <ImportantText text={texts.P_Reflection_ImportantPart1}/>
 
-            <h2 id="whatReflection">{texts[7].text}</h2>
+            <h2 id="whatReflection">{texts.P_Reflection_Subtitle1}</h2>
             <p>
-                {texts[8].text}
+                {texts.P_Reflection_Part4}
                 <a href="https://learn.microsoft.com/en-us/dotnet/framework/reflection-and-codedom/reflection">
                     Reflection in .NET
                 </a>
             </p>
-            <p>{texts[9].text}</p>
+            <p>{texts.P_Reflection_Part5}</p>
             <ul>
-                <li>{texts[10].text}</li>
-                <li>{texts[11].text}</li>
+                <li>{texts.P_Reflection_Flea1}</li>
+                <li>{texts.P_Reflection_Flea2}</li>
             </ul>
-            <p>{texts[12].text}</p>
-            <p>{texts[13].text}</p>
+            <p>{texts.P_Reflection_Part6}</p>
+            <p>{texts.P_Reflection_Part7}</p>
 
-            <h2 id="pluginSetup">{texts[14].text}</h2>
-            <p>{texts[15].text}</p>
+            <h2 id="pluginSetup">{texts.P_Reflection_Subtitle2}</h2>
+            <p>{texts.P_Reflection_Part8}</p>
             <ul>
-                <li>{texts[16].text}</li>
-                <li>{texts[17].text}</li>
-                <li>{texts[18].text}</li>
+                <li>{texts.P_Reflection_Flea3}</li>
+                <li>{texts.P_Reflection_Flea4}</li>
+                <li>{texts.P_Reflection_Flea5}</li>
             </ul>
-            <ImportantText text={texts[19].text}/>
-            <p>{texts[20].text}</p>
+            <ImportantText text={texts.P_Reflection_ImportantPart2}/>
+            <p>{texts.P_Reflection_Part9}</p>
 
-            <h2 id="dataAccess">{texts[21].text}</h2>
-            <p>{texts[22].text}</p>
-            <p>{texts[23].text}</p>
+            <h2 id="dataAccess">{texts.P_Reflection_Subtitle3}</h2>
+            <p>{texts.P_Reflection_Part10}</p>
+            <p>{texts.P_Reflection_Part11}</p>
             <ol>
-                <li>{texts[24].text}</li>
-                <li>{texts[25].text}</li>
-                <li>{texts[26].text}</li>
-                <li>{texts[27].text}</li>
+                <li>{texts.P_Reflection_Flea6}</li>
+                <li>{texts.P_Reflection_Flea7}</li>
+                <li>{texts.P_Reflection_Flea8}</li>
+                <li>{texts.P_Reflection_Flea9}</li>
             </ol>
             <SyntaxHighlighter language="csharp" style={darcula}>
                 {codeInspectData}
             </SyntaxHighlighter>
-            <ImportantText text={texts[28].text}>
+            <ImportantText text={texts.P_Reflection_ImportantPart3}>
                 <a href="https://learn.microsoft.com/en-us/dotnet/api/system.reflection.memberinfo?view=net-7.0">
                     MemberInfo Class
                 </a>
             </ImportantText>
-            <p>{texts[29].text}</p> 
+            <p>{texts.P_Reflection_Part12}</p> 
             <CaptionedFigure 
                 imgSrc={"resources/visuels/posts/reflection/Post_Reflexion_B.png"} 
                 imgAlt={"Custom editor for components of UnityBindedGraphics plugin."} 
-                captionText={texts[30].text}
+                captionText={texts.P_Reflection_Caption3}
             />
 
-            <h2 id="dynamicCall">{texts[31].text}</h2>
-            <p>{texts[32].text}</p>
-            <p>{texts[33].text}</p>
-            <p>{texts[34].text}</p>
+            <h2 id="dynamicCall">{texts.P_Reflection_Subtitle4}</h2>
+            <p>{texts.P_Reflection_Part13}</p>
+            <p>{texts.P_Reflection_Part14}</p>
+            <p>{texts.P_Reflection_Part15}</p>
             <ol>
-                <li>{texts[35].text}</li>
-                <li>{texts[36].text}</li>
-                <li>{texts[37].text}</li>
+                <li>{texts.P_Reflection_Flea10}</li>
+                <li>{texts.P_Reflection_Flea11}</li>
+                <li>{texts.P_Reflection_Flea12}</li>
             </ol>
-            <p>{texts[38].text}</p>
+            <p>{texts.P_Reflection_Part16}</p>
             <SyntaxHighlighter language="csharp" style={darcula}>
                 {codeTestInvoke}
             </SyntaxHighlighter>
-            <ImportantText text={texts[39].text}/>
-            <p>{texts[40].text}</p>
+            <ImportantText text={texts.P_Reflection_ImportantPart4}/>
+            <p>{texts.P_Reflection_Part17}</p>
 
 
-            <h2 id="drawbacksReflection">{texts[41].text}</h2>
-            <p>{texts[42].text}</p>
-            <p>{texts[43].text}</p>
+            <h2 id="drawbacksReflection">{texts.P_Reflection_Subtitle5}</h2>
+            <p>{texts.P_Reflection_Part18}</p>
+            <p>{texts.P_Reflection_Part19}</p>
             <ul>
-                <li>{texts[44].text}</li>
-                <li>{texts[45].text}</li>
-                <li>{texts[46].text}</li>
-                <li>{texts[47].text}</li>
+                <li>{texts.P_Reflection_Flea13}</li>
+                <li>{texts.P_Reflection_Flea14}</li>
+                <li>{texts.P_Reflection_Flea15}</li>
+                <li>{texts.P_Reflection_Flea16}</li>
             </ul>
-            <ImportantText text={texts[48].text}>
+            <ImportantText text={texts.P_Reflection_ImportantPart5}>
                 <a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/types/boxing-and-unboxing">
                     ici
                 </a>
             </ImportantText>
-            <p>{texts[49].text}</p>
-            <p>{texts[50].text}</p>
+            <p>{texts.P_Reflection_Part20}</p>
+            <p>{texts.P_Reflection_Part21}</p>
 
-            <h2 id="createMethod">{texts[51].text}</h2>
-            <p>{texts[52].text}</p>
+            <h2 id="createMethod">{texts.P_Reflection_Subtitle6}</h2>
+            <p>{texts.P_Reflection_Part22}</p>
             <SyntaxHighlighter language="csharp" style={darcula}>
                 {codeIRefValueWrapper}
             </SyntaxHighlighter>
-            <p>{texts[53].text}</p>
+            <p>{texts.P_Reflection_Part23}</p>
             <SyntaxHighlighter language="csharp" style={darcula}>
                 {codeExampleIntDelegate}
             </SyntaxHighlighter>
-            <p>{texts[54].text}</p>
+            <p>{texts.P_Reflection_Part24}</p>
             <SyntaxHighlighter language="csharp" style={darcula}>
                 {codeExampleGenericMethod}
             </SyntaxHighlighter>
-            <ImportantText text={texts[55].text}/>
-            <p>{texts[56].text}</p>
-            <ImportantText text={texts[57].text}>
+            <ImportantText text={texts.P_Reflection_ImportantPart6}/>
+            <p>{texts.P_Reflection_Part25}</p>
+            <ImportantText text={texts.P_Reflection_ImportantPart7}>
                 <a href="https://learn.microsoft.com/en-us/dotnet/api/system.type.makegenerictype?view=net-7.0">
                     Type.MakeGenericType(Type[])
                 </a>
             </ImportantText>
 
-            <h2 id="createDelegate">{texts[58].text}</h2>
-            <p>{texts[59].text}</p>
+            <h2 id="createDelegate">{texts.P_Reflection_Subtitle7}</h2>
+            <p>{texts.P_Reflection_Part26}</p>
             <p>
-                {texts[60].text}
+                {texts.P_Reflection_Part27}
                 <a href="https://learn.microsoft.com/en-us/dotnet/api/system.delegate.createdelegate?view=net-7.0">
                     Delegate.CreateDelegate
                 </a>
             </p>
-            <p>{texts[61].text}</p>
-            <ImportantText text={texts[62].text}/>
-            <p>{texts[63].text}</p>
+            <p>{texts.P_Reflection_Part28}</p>
+            <ImportantText text={texts.P_Reflection_ImportantPart8}/>
+            <p>{texts.P_Reflection_Part29}</p>
             <SyntaxHighlighter language="csharp" style={darcula}>
                 {codeCreateDynamicFinal}
             </SyntaxHighlighter>
-            <ImportantText text={texts[64].text}/>
-            <p>{texts[65].text}</p>
-            <p>{texts[66].text}</p>
-            <p>{texts[67].text}</p>
+            <ImportantText text={texts.P_Reflection_ImportantPart9}/>
+            <p>{texts.P_Reflection_Part30}</p>
+            <p>{texts.P_Reflection_Part31}</p>
+            <p>{texts.P_Reflection_Part32}</p>
 
         </section>
     );

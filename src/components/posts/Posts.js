@@ -8,17 +8,17 @@ function Posts() {
 
   return (
     <section className="posts">
-      {
+      {/* {
         postsData.map(postData => (
           <Post 
-            key={postData.titleIndex}
-            title={texts[postData.titleIndex]?.text} 
-            description={texts[postData.descriptionIndex]?.text}
+            key={postData.titleId}
+            title={texts[postData.titleId]} 
+            description={texts[postData.descriptionId]}
             link={postData.link} 
-            date={texts[postData.dateIndex]?.text}
+            date={texts[postData.dateId]}
           />
         ))
-      }
+      } */}
     </section>
   );
 }

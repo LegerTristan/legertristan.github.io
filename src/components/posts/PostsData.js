@@ -1,9 +1,9 @@
 const postsData = 
 [
     {
-        titleIndex: 0,
-        dateIndex: 1,
-        descriptionIndex: 2,
+        titleId: "P_Reflection_Title",
+        dateId: "P_Reflection_Date",
+        descriptionId: "P_Reflection_Description",
         link: "/posts_reflection"
     }
 ]
