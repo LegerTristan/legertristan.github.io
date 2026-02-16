@@ -1,19 +1,13 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import Select from 'react-select';
+import useTranslation from '../../hooks/useTranslation';
 import languagesData from './LanguagesData';
 import LanguageContext from './LanguagesContext';
 import "./LanguagesDropdown.css";
 
 function LanguagesDropdown() {
     const { currentLanguage, setCurrentLanguage } = useContext(LanguageContext);
-    const [texts, setTexts] = useState(Array(1).fill({}));
-
-    useEffect(() => {
-        fetch(process.env.PUBLIC_URL + "resources/json/LanguagesDropdown.json")
-            .then(response => response.json())
-            .then(data => setTexts(data[currentLanguage.value]))
-            .catch(error => console.error(error));
-    }, [currentLanguage]);
+    const texts = useTranslation('LanguagesDropdown');
 
     const formatOptionLabel = (language) => (
         <div className="LanguageFlagItem">

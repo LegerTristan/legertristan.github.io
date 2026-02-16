@@ -17,46 +17,51 @@ function Portfolio() {
   const projects = [
     { 
         title: "Voice Converter", 
-        img: "/resources/visuels/UBGVisuel.jpg", 
-        summary: texts[28]?.text,
-        details: <>{texts[29]?.text} <br/> {texts[30]?.text}</>
+        img: "/resources/visuels/VoiceConverterVisuel.jpg", 
+        link: "https://www.xandimmersion.com/tools",
+        summary: texts[18]?.text,
+        details: <>{texts[19]?.text} <br/> {texts[20]?.text}</>
     },
     { 
         title: "Ethermon", 
         img: "/resources/visuels/EthermonVisuel.png", 
-        summary: texts[28]?.text,
-        details: <>{texts[29]?.text} <br/> {texts[30]?.text}</>
+        summary: texts[33]?.text,
+        details: <>{texts[34]?.text} <br/> {texts[35]?.text}</>
     },
     { 
         title: "Diagen", 
-        img: "/resources/visuels/UBGVisuel.jpg", 
-        summary: texts[28]?.text,
-        details: <>{texts[29]?.text} <br/> {texts[30]?.text}</>
+        video: "/resources/videos/EvilLordPresentation.mp4",
+        link: "https://www.xandimmersion.com/tools",
+        summary: texts[21]?.text,
+        details: <>{texts[22]?.text} <br/> {texts[23]?.text}</>
     },
     {
         title: "Geppetto", 
         video: "/resources/videos/GeppettoPresentation.mp4",
-        summary: texts[28]?.text,
-        details: <>{texts[29]?.text} <br/> {texts[30]?.text}</>
+        link: "https://www.xandimmersion.com/tools",
+        summary: texts[24]?.text,
+        details: <>{texts[25]?.text} <br/> {texts[26]?.text}</>
     },
     { 
         title: "Outroad Fury", 
-        img: "/resources/visuels/UBGVisuel.jpg", 
-        summary: texts[28]?.text,
-        details: <>{texts[29]?.text} <br/> {texts[30]?.text}</>
+        video: "/resources/videos/OutroadFuryTrailer.mp4",
+        link: "https://store.steampowered.com/app/2981030/OutRoad_Fury/",
+        summary: texts[12]?.text,
+        details: <>{texts[13]?.text} <br/> {texts[14]?.text}</>
     },
     { 
         title: "Unity Binded Graphics", 
         img: "/resources/visuels/UBGVisuel.jpg", 
-        summary: texts[28]?.text,
-        details: <>{texts[29]?.text} <br/> {texts[30]?.text}</>
+        link: "https://github.com/LegerTristan/UnityBindedGraphics",
+        summary: texts[27]?.text,
+        details: <>{texts[28]?.text} <br/> {texts[29]?.text}</>
     },
     { 
         title: "Texture Combiner", 
         img: "/resources/visuels/TextureCombinerVisuel.png", 
         link: "https://github.com/LegerTristan/TextureCombiner", 
-        summary: texts[22]?.text,
-        details: <>{texts[23]?.text} <br/> {texts[24]?.text}</>
+        summary: texts[30]?.text,
+        details: <>{texts[31]?.text} <br/> {texts[32]?.text}</>
     },
     { 
         title: "AmongDefense", 
@@ -89,8 +94,8 @@ function Portfolio() {
     { 
         title: "SYRA", 
         img: "/resources/visuels/SYRAVisuel.jpg", 
-        summary: texts[6]?.text,
-        details: <>{texts[7]?.text} <br/> {texts[8]?.text}</>
+        summary: texts[9]?.text,
+        details: <>{texts[10]?.text} <br/> {texts[11]?.text}</>
     },
   ];
 

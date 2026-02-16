@@ -4,16 +4,19 @@ import './ProjectCard.css';
 function ProjectCard({ title, imgSrc, videoSrc, summary, details, joinRef }) {
   const videoRef = useRef(null);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const handleMouseEnter = () => {
     if (videoRef.current) {
       videoRef.current.play();
+      setIsPlaying(true);
     }
   };
 
   const handleMouseLeave = () => {
     if (videoRef.current) {
       videoRef.current.pause();
+      setIsPlaying(false);
     }
   };
 
@@ -23,9 +26,11 @@ function ProjectCard({ title, imgSrc, videoSrc, summary, details, joinRef }) {
         {videoSrc ? (
           <>
             <video ref={videoRef} src={videoSrc} loop muted playsInline />
-            <div className="video-icon">
-                <img src={process.env.PUBLIC_URL + "/resources/icons/iconVideo.png"} alt="Video" />
-            </div>
+            {!isPlaying && (
+                <div className="video-player-icon">
+                    <img src={process.env.PUBLIC_URL + "/resources/icons/PlayVideoIcon.png"} alt="Play" />
+                </div>
+            )}
           </>
         ) : (
           <img src={imgSrc} alt={title} />

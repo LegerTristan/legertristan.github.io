@@ -1,26 +1,26 @@
 {
   "english": [
-    { "id": "Catchphrase", "text": "Transforming complex concepts into fluid and performant game systems." },
-    { "id": "Bio_1", "text": "Specialized in Gameplay Programming and Artificial Intelligence, I design optimized systems and tools for video games. With 6 years of practical experience, my approach combines software rigor and algorithmic innovation." },
+    { "id": "Catchphrase", "text": "Striving to develop fluid and performant game systems through the exploration of complex concepts." },
+    { "id": "Bio_1", "text": "Focusing on Gameplay Programming and Artificial Intelligence, I work on developing systems and tools for video games. With 6 years of practice, I aim to combine technical rigor with continuous algorithmic learning." },
     { "id": "Bio_2", "text": "My background allowed me to master major game engines like Unreal Engine and Unity, while developing expertise in low-level programming and editor tools." },
     { "id": "Bio_3", "text": "Currently pursuing an MSc in AI, I strive to integrate cutting-edge technologies like Machine Learning and Deep Learning at the heart of the user experience." },
     { "id": "ExpTitle", "text": "Latest Experiences" },
     { "id": "Sidebar_Formation", "text": "Current Education" },
     { "id": "Subtitle", "text": "Gameplay Programmer | MSc Artificial Intelligence Student" },
-    { "id": "ExpTitle_Repeat", "text": "LATEST EXPERIENCES" },
+    { "id": "ExpTitle_Repeat", "text": "LATEST PROFESSIONAL EXPERIENCES" },
     { "id": "Formation_Title", "text": "CURRENT EDUCATION" },
     { "id": "Position_Title", "text": "CURRENT POSITION" },
     { "id": "Skills_Title", "text": "KEY SKILLS" }
   ],
   "french": [
-    { "id": "Catchphrase", "text": "Transformer des concepts complexes en systèmes de jeu fluides et performants." },
-    { "id": "Bio_1", "text": "Spécialisé dans le Gameplay Programming et l'Intelligence Artificielle, je conçois des systèmes et des outils optimisés pour le jeu vidéo. Avec 6 ans de pratique concrète, mon approche combine rigueur logicielle et innovation algorithmique." },
+    { "id": "Catchphrase", "text": "Travailler à la conception de systèmes de jeu fluides et performants à travers l'exploration de concepts complexes." },
+    { "id": "Bio_1", "text": "Orienté vers le Gameplay Programming et l'Intelligence Artificielle, je travaille sur le développement de systèmes et d'outils pour le jeu vidéo. Avec 6 ans de pratique, je cherche à allier rigueur technique et apprentissage algorithmique continu." },
     { "id": "Bio_2", "text": "Mon parcours m'a permis de maîtriser les moteurs de jeu majeurs comme Unreal Engine et Unity, tout en développant une expertise en programmation de bas niveau et en outils éditeurs." },
     { "id": "Bio_3", "text": "Actuellement en Master spécialisé en IA, je m'efforce d'intégrer des technologies de pointe (Machine Learning, Deep Learning) au cœur de l'expérience utilisateur." },
     { "id": "ExpTitle", "text": "Dernières Expériences" },
     { "id": "Sidebar_Formation", "text": "Formation Actuelle" },
     { "id": "Subtitle", "text": "Gameplay Programmer | Étudiant MSc Intelligence Artificielle" },
-    { "id": "ExpTitle_Repeat", "text": "DERNIÈRES EXPÉRIENCES" },
+    { "id": "ExpTitle_Repeat", "text": "DERNIÈRES EXPÉRIENCES PROFESSIONNELLES" },
     { "id": "Formation_Title", "text": "FORMATION ACTUELLE" },
     { "id": "Position_Title", "text": "POSTE ACTUEL" },
     { "id": "Skills_Title", "text": "COMPÉTENCES CLÉS" }

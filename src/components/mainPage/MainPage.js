@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useContext } from 'react';
-import LanguageContext from '../languagesDropdown/LanguagesContext';
+import React from 'react';
+import useTranslation from '../../hooks/useTranslation';
 import About from '../about/About';
 import Portfolio from '../portfolio/Portfolio';
 import Skills from '../skills/Skills';
@@ -8,15 +8,7 @@ import { Link } from 'react-router-dom';
 import './MainPage.css';
 
 function MainPage() {
-  const { currentLanguage } = useContext(LanguageContext);
-  const [texts, setTexts] = useState(Array(3).fill({}));
-
-  useEffect(() => {
-    fetch(process.env.PUBLIC_URL + "resources/json/MainPage.json")
-      .then(response => response.json())
-      .then(data => setTexts(data[currentLanguage.value]))
-      .catch(error => console.error(error));
-  }, [currentLanguage]);
+  const texts = useTranslation('MainPage');
 
   return (
     <main className="main-page">

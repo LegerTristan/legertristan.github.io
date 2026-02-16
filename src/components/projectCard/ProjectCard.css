@@ -122,3 +122,27 @@
     border-bottom: 1px solid #4da3ff;
     letter-spacing: 1px;
 }
+
+.video-player-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.video-player-icon img {
+    width: 25px !important;
+    height: 25px !important;
+    margin-left: 4px; /* Petit décalage pour centrer visuellement le triangle de lecture */
+}

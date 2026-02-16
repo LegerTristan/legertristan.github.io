@@ -1,17 +1,9 @@
-import React, { useState, useEffect, useContext } from 'react'
-import LanguageContext from '../languagesDropdown/LanguagesContext';
+import React from 'react';
+import useTranslation from '../../hooks/useTranslation';
 import './About.css';
 
 function About() {
-  const { currentLanguage } = useContext(LanguageContext);
-  const [texts, setTexts] = useState(Array(11).fill({}));
-
-  useEffect(() => {
-      fetch(process.env.PUBLIC_URL + "resources/json/About.json")
-      .then(response => response.json())
-      .then(data => setTexts(data[currentLanguage.value]))
-      .catch(error => console.error(error));
-  }, [currentLanguage]);
+  const texts = useTranslation('About');
 
   return (
     <>
@@ -26,28 +18,25 @@ function About() {
                     <p>
                         <strong>{texts[0]?.text}</strong>
                     </p>
-                    <p>
-                        {texts[1]?.text}
-                    </p>
-                    <p>
-                        {texts[2]?.text}
-                    </p>
-                    <p>
-                        {texts[3]?.text}
-                    </p>
+                    <p>{texts[1]?.text}</p>
+                    <p>{texts[2]?.text}</p>
+                    <p>{texts[3]?.text}</p>
                 </div>
                 
                 <div className="experiences-section info-card-flat">
                     <h2 className="exp-title">{texts[7]?.text}</h2>
                     <div className="exp-grid-horizontal">
                         <div className="exp-item">
-                            <strong>Gameplay Programmer</strong><br />X&Immersion
+                            <strong>Gameplay Programmer</strong><br />X&Immersion<br />
+                            <span className="exp-date">2024 - Present</span>
                         </div>
                         <div className="exp-item">
-                            <strong>AI Programmer</strong><br />Outroad Fury
+                            <strong>AI Programmer</strong><br />Outroad Fury<br />
+                            <span className="exp-date">2023 - 2024</span>
                         </div>
                         <div className="exp-item">
-                            <strong>Gameplay Programmer</strong><br />Dwarfender
+                            <strong>Gameplay Programmer</strong><br />Dwarfender<br />
+                            <span className="exp-date">2022</span>
                         </div>
                     </div>
                 </div>
