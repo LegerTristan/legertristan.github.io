@@ -1,0 +1,12 @@
+{
+  "english": {
+    "BlogTitle": "Technical Blog",
+    "BlogSubtitle": "I share my reflections and technical breakdowns of my projects.",
+    "BlogBtn": "View All Posts"
+  },
+  "french": {
+    "BlogTitle": "Blog Technique",
+    "BlogSubtitle": "Je partage mes réflexions et analyses techniques de mes projets.",
+    "BlogBtn": "Voir tous les articles"
+  }
+}

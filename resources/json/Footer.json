@@ -1,8 +1,10 @@
 {
-  "english": [
-    { "id": "Rights", "text": "All rights reserved." }
-  ],
-  "french": [
-    { "id": "Rights", "text": "Tous droits réservés." }
-  ]
+  "english": {
+    "Rights": "All rights reserved.",
+    "Icons": "Some icons were made by "
+  },
+  "french": {
+    "Rights": "Tous droits réservés.",
+    "Icons": "Certaines icônes ont été créées par "
+  }
 }
