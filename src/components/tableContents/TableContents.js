@@ -1,78 +1,60 @@
-import React, {useState, useEffect} from 'react';
-import './TableContents.css'
+import React, { useState, useEffect } from 'react';
+import './TableContents.css';
 
+const getNestedHeadings = (headingElements) => {
+    const nestedHeadings = [];
+    headingElements.forEach((heading) => {
+        const { innerText: title, id } = heading;
+        if (heading.nodeName === "H1") {
+            nestedHeadings.push({ id, title, items: [] });
+        } else if (heading.nodeName === "H2" && nestedHeadings.length > 0) {
+            nestedHeadings[nestedHeadings.length - 1].items.push({ id, title });
+        }
+    });
+    return nestedHeadings;
+};
 
-const useHeadingsData = () =>
-{
+const useHeadingsData = (contentTrigger) => {
     const [nestedHeadings, setNestedHeadings] = useState([]);
 
-    useEffect(() => 
-    {
+    useEffect(() => {
         const headingElements = Array.from(
-            document.querySelectorAll("h1, h2")
+            document.querySelectorAll(".postContent h1, .postContent h2")
         );
-
-        console.log("Bordel " + nestedHeadings);
-
-            const newNestedHeadings = getNestedHeadings(headingElements);
-            console.log("nestedings " + newNestedHeadings);
-            setNestedHeadings(newNestedHeadings);
-        
-
-    }, [nestedHeadings]);
+        const newNestedHeadings = getNestedHeadings(headingElements);
+        setNestedHeadings(newNestedHeadings);
+    }, [contentTrigger]);
 
     return { nestedHeadings };
-}    
-
-const getNestedHeadings = (headingElements) =>
-{
-    const nestedHeadings = [];
-    headingElements.forEach((heading, index) => 
-        {
-            const {innerText: title, id} = heading;
-
-            if(heading.nodeName === "H1")
-            {
-                nestedHeadings.push({id, title, items: []});
-            }
-            else if(heading.nodeName === "H2" && nestedHeadings.length > 0)
-            {
-                nestedHeadings[nestedHeadings.length - 1].items.push({id, title, });
-            }
-        });
-
-    return nestedHeadings;
-}
+};
 
 const Headings = ({ headings }) => (
     <ul>
-      {headings.map((heading) => (
-        <li key={heading.id}>
-          <a href={`#${heading.id}`}>{heading.title}</a>
-            {heading.items.length > 0 && (
-                <ul>
-                    {heading.items.map((child) => (
-                        <li key={child.id}>
-                            <a href={`#${child.id}`}>{child.title}</a>
-                        </li>
-                    ))}
-                </ul>
-            )}
-        </li>
-      ))}
+        {headings.map((heading) => (
+            <li key={heading.id}>
+                <a href={`#${heading.id}`}>{heading.title}</a>
+                {heading.items.length > 0 && (
+                    <ul>
+                        {heading.items.map((child) => (
+                            <li key={child.id}>
+                                <a href={`#${child.id}`}>{child.title}</a>
+                            </li>
+                        ))}
+                    </ul>
+                )}
+            </li>
+        ))}
     </ul>
 );
 
-function TableContents()
-{
-    const { nestedHeadings } = useHeadingsData();
+function TableContents({ contentTrigger }) {
+    const { nestedHeadings } = useHeadingsData(contentTrigger);
 
-    return(
+    return (
         <nav className="tableContents">
             <Headings headings={nestedHeadings} />
         </nav>
     );
-    
 }
 
 export default TableContents;

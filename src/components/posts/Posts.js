@@ -1,3 +1,4 @@
+import React from 'react';
 import useTranslation from '../../hooks/useTranslation';
 import Post from './post/Post';
 import postsData from './PostsData';
@@ -8,17 +9,15 @@ function Posts() {
 
   return (
     <section className="posts">
-      {/* {
-        postsData.map(postData => (
-          <Post 
-            key={postData.titleId}
-            title={texts[postData.titleId]} 
-            description={texts[postData.descriptionId]}
-            link={postData.link} 
-            date={texts[postData.dateId]}
-          />
-        ))
-      } */}
+      {postsData.map(postData => (
+        <Post 
+          key={postData.id}
+          title={texts[postData.titleId]} 
+          description={texts[postData.descriptionId]}
+          link={`/posts/${postData.id}`} 
+          date={texts[postData.dateId]}
+        />
+      ))}
     </section>
   );
 }
