@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useMediaQuery } from '@mui/material';
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import LanguageContext from '../languagesDropdown/LanguagesContext';
 import Menu from '../navigation/Menu';
 import MobileMenu from '../navigation/mobile/MobileMenu';
@@ -24,7 +24,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainPage/>} />
           <Route path="/posts" element={<Posts/>} />
-          <Route path="/posts/:postId" element={<PostDetail/>} />
+          <Route path="/posts/:postId" element={<PostDetail />} />
           <Route path="*" element={<Navigate to="/" replace/>}/>
         </Routes>
       </Router>
