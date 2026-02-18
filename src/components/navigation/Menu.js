@@ -1,3 +1,4 @@
+import { HashLink } from 'react-router-hash-link';
 import useTranslation from '../../hooks/useTranslation';
 import "./Menu.css";
 
@@ -9,9 +10,13 @@ function Menu({ pages }) {
             <ul>
                 {pages.map(page => (
                     <li key={page.titleId}>
-                        <a href={page.link} className="link">
+                        <HashLink 
+                            smooth 
+                            to={page.link} 
+                            className="link"
+                        >
                             {texts[page.titleId]}
-                        </a>
+                        </HashLink>
                     </li>
                 ))}
             </ul>
