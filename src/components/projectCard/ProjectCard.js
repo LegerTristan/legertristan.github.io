@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import './ProjectCard.css';
 
-function ProjectCard({ title, imgSrc, videoSrc, summary, details, joinRef }) {
+function ProjectCard({ title, imgSrc, videoSrc, summary, details, joinRef, tags }) {
   const videoRef = useRef(null);
   const [isExpanded, setIsExpanded] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -41,6 +41,14 @@ function ProjectCard({ title, imgSrc, videoSrc, summary, details, joinRef }) {
       </div>
 
       <div className="project-info">
+        {tags && (
+            <div className="project-tags">
+                {tags.map((tag, index) => (
+                    <span key={index}>{tag}</span>
+                ))}
+            </div>
+        )}
+        
         <p className="project-summary">{summary}</p>
         
         <div className={`project-details ${isExpanded ? 'expanded' : ''}`}>

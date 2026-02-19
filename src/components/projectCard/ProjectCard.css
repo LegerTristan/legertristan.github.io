@@ -70,11 +70,32 @@
     flex-grow: 1;
 }
 
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+    justify-content: center;
+}
+
+.project-tags span {
+    font-size: 0.7rem;
+    background: #111;
+    padding: 3px 10px;
+    color: #888;
+    border: 1px solid #222;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+
 .project-summary {
     font-size: 0.95rem;
     color: #bbb;
     margin: 0;
     line-height: 1.6;
+    text-align: center;
 }
 
 .project-details {
@@ -85,6 +106,7 @@
     color: #777;
     line-height: 1.6;
     opacity: 0;
+    text-align: center;
 }
 
 .project-details.expanded {
@@ -144,5 +166,5 @@
 .video-player-icon img {
     width: 25px !important;
     height: 25px !important;
-    margin-left: 4px; /* Petit décalage pour centrer visuellement le triangle de lecture */
+    margin-left: 4px;
 }

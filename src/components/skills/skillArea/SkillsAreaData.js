@@ -24,7 +24,7 @@ const skillsAreaData =
             new SkillInfo("Miro", "resources/icons/MiroIcon.png", "Miro icon", "MiroDsc"), 
             new SkillInfo("Trello", "resources/icons/TrelloIcon.png", "Trello icon", "TrelloDsc"), 
             new SkillInfo("SKLearn", "resources/icons/SKLearnIcon.png", "Sci-Kit learn icon", "SKLearnDsc"), 
-            new SkillInfo("FR", "resources/icons/iconFlagFR.jpg", "french flag icon", "FRDsc")
+            new SkillInfo("FR", "resources/icons/IconFlagFR.jpg", "french flag icon", "FRDsc")
         ]
     },
     {
@@ -32,13 +32,13 @@ const skillsAreaData =
         infos: [
             new SkillInfo("BC", "resources/icons/BlockchainIcon.png", "Blockchain icon", "BCDsc"), 
             new SkillInfo("HH", "resources/icons/HardhatIcon.png", "Hardhat icon", "HHDsc"), 
-            new SkillInfo("CU", "resources/icons/ClickUpIcon.png", "ClickUp icon", "CUDsc"), 
+            new SkillInfo("CU", "resources/icons/ClickupIcon.png", "ClickUp icon", "CUDsc"), 
             new SkillInfo("HLSL", "resources/icons/HLSLIcon.png", "HLSL icon", "HLSLDsc"), 
             new SkillInfo("UML", "resources/icons/iconStarUML.png", "StarUML icon", "UMLDsc"),
             new SkillInfo("3C", "resources/icons/icon3C.png", "3C icon", "3CDsc"), 
             new SkillInfo("Android", "resources/icons/iconAndroid.png", "Android icon", "AndroidDsc"), 
             new SkillInfo("UI", "resources/icons/iconUI.png", "UI icon", "UIDsc"), 
-            new SkillInfo("EN", "resources/icons/iconFlagEN.jpg", "English flag icon", "ENDsc")
+            new SkillInfo("EN", "resources/icons/IconFlagEN.jpg", "English flag icon", "ENDsc")
         ]
     },
     {

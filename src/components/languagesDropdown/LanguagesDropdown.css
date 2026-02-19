@@ -1,24 +1,21 @@
 .LanguagesDropdownContainer {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    gap: 12px;
+    gap: 8px;
+    width: auto; 
 }
 
 .LanguageLabelText {
-    font-size: 0.85rem;
-    color: #555;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    display: none; 
 }
 
 .SelectWrapper {
-    width: 65px;
+    width: 50px; 
 }
 
 .LanguageFlagItem img {
-    width: 24px;
-    height: 16px;
+    width: 20px;
+    height: 14px;
     display: block;
     object-fit: cover;
     border-radius: 2px;

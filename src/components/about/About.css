@@ -143,13 +143,14 @@
     flex-wrap: wrap;
     gap: 6px;
     margin-top: 10px;
+    justify-content: center;
 }
 
 .tags-compact span {
-    font-size: 0.65rem;
+    font-size: 0.8rem;
     background: #111;
     padding: 3px 8px;
-    color: #777;
+    color: #AAA;
     border: 1px solid #222;
 }
 

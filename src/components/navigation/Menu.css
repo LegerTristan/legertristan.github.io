@@ -7,27 +7,59 @@ nav {
     width: 100%;
 }
 
-nav ul {
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+}
+
+.nav-links-wrapper {
+    flex: 1;
     display: flex;
     justify-content: center;
+}
+
+nav ul {
+    display: flex;
     list-style: none;
     margin: 0;
-    padding: 1.5em 0; 
+    padding: 0;
 }
 
 nav ul li {
-    margin: 0 5em; 
+    margin: 0 20px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.1rem; 
+    font-size: 0.9rem;
+    white-space: nowrap; 
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
     color: #4da3ff;
+}
+
+.nav-languages-wrapper {
+    flex-shrink: 0; 
+    width: auto;
+}
+
+@media (max-width: 900px) {
+    .nav-links-wrapper {
+        padding-left: 0;
+    }
+    nav ul li {
+        margin: 0 10px;
+    }
+    nav ul li a {
+        font-size: 0.75rem;
+    }
 }

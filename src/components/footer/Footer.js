@@ -1,6 +1,5 @@
 import React from 'react';
 import useTranslation from '../../hooks/useTranslation';
-import LanguagesDropdownComponent from '../languagesDropdown/LanguagesDropdown';
 import "./Footer.css";
 
 function Footer()
@@ -15,7 +14,6 @@ function Footer()
                     <p>{year} - Copyright Tristan LEGER - {texts.Rights}</p>
                     <p className="attribution">{texts.Icons}<a href="https://www.freepik.com" title="Freepik" target="_blank" rel="noreferrer">Freepik</a> from Flaticon</p>
                 </div>
-                <LanguagesDropdownComponent/>
             </div>
         </footer>
     )

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import Select from 'react-select';
 import useTranslation from '../../hooks/useTranslation';
 import languagesData from './LanguagesData';
