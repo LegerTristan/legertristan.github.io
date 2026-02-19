@@ -1,9 +1,9 @@
 {
   "english": {
     "Catchphrase": "Striving to develop fluid and performant game systems through the exploration of complex concepts.",
-    "Bio_1": "Focusing on Gameplay Programming and Artificial Intelligence, I work on developing systems and tools for video games. With 6 years of practice, I aim to combine technical rigor with continuous algorithmic learning.",
-    "Bio_2": "My background allowed me to master major game engines like Unreal Engine and Unity, while developing expertise in low-level programming and editor tools.",
-    "Bio_3": "Currently pursuing an MSc in AI, I strive to integrate cutting-edge technologies like Machine Learning and Deep Learning at the heart of the user experience.",
+    "Bio_1": "Specialized in Gameplay Programming and Artificial Intelligence, I develop robust systems and custom tools for the video game industry.",
+    "Bio_2": "Proficient with Unreal Engine (C++) and Unity (C#), I focus on creating optimized architectures and advanced editor plugins to improve production pipelines.",
+    "Bio_3": "Currently an MSc student in AI, I am integrating machine learning models within immersive projects at X&Immersion to shape the next generation of interactive experiences.",
     "Subtitle": "Gameplay Programmer | MSc Artificial Intelligence Student",
     "ExpTitle_Repeat": "LATEST PROFESSIONAL EXPERIENCES",
     "Formation_Title": "CURRENT EDUCATION",
@@ -12,9 +12,9 @@
   },
   "french": {
     "Catchphrase": "Travailler à la conception de systèmes de jeu fluides et performants à travers l'exploration de concepts complexes.",
-    "Bio_1": "Orienté vers le Gameplay Programming et l'Intelligence Artificielle, je travaille sur le développement de systèmes et d'outils pour le jeu vidéo. Avec 6 ans de pratique, je cherche à allier rigueur technique et apprentissage algorithmique continu.",
-    "Bio_2": "Mon parcours m'a permis de maîtriser les moteurs de jeu majeurs comme Unreal Engine et Unity, tout en développant une expertise en programmation de bas niveau et en outils éditeurs.",
-    "Bio_3": "Actuellement en Master spécialisé en IA, je m'efforce d'intégrer des technologies de pointe (Machine Learning, Deep Learning) au cœur de l'expérience utilisateur.",
+    "Bio_1": "Spécialisé en Gameplay Programming et en Intelligence Artificielle, je conçois des systèmes robustes et des outils sur mesure pour l'industrie du jeu vidéo.",
+    "Bio_2": "Maîtrisant Unreal Engine (C++) et Unity (C#), je me concentre sur la création d'architectures optimisées et de plugins éditeurs pour fluidifier les pipelines de production.",
+    "Bio_3": "Actuellement étudiant en Master IA, j'intègre des modèles de machine learning au sein de projets immersifs chez X&Immersion pour concevoir les expériences interactives de demain.",
     "Subtitle": "Gameplay Programmer | Étudiant MSc Intelligence Artificielle",
     "ExpTitle_Repeat": "DERNIÈRES EXPÉRIENCES PROFESSIONNELLES",
     "Formation_Title": "FORMATION ACTUELLE",
