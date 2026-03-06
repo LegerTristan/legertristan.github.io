@@ -2,11 +2,17 @@
   "english": {
     "P_Reflection_Title": "Using Reflection to Generate Code Dynamically.",
     "P_Reflection_Date": "Oct. 17 2023",
-    "P_Reflection_Description": "We will see how to dynamically create generic methods and delegates based on a type that we will also retrieve through reflection!"
+    "P_Reflection_Description": "We will see how to dynamically create generic methods and delegates based on a type that we will also retrieve through reflection!",
+    "P_DynamicMaskEmission_Title": "Scan effect with dynamic mask emission",
+    "P_DynamicMaskEmission_Date": "Mar. 06 2026",
+    "P_DynamicMaskEmission_Description": "Exploring dynamic mask emission techniques to create a scan effect !"
   },
   "french": {
     "P_Reflection_Title": "Utiliser la réflexion pour produire du code dynamiquement.",
     "P_Reflection_Date": "17 Oct. 2023",
-    "P_Reflection_Description": "On va voir comment créer dynamiquement des méthodes génériques et des delegates à partir d'un type récupéré par réflexion !"
+    "P_Reflection_Description": "On va voir comment créer dynamiquement des méthodes génériques et des delegates à partir d'un type récupéré par réflexion !",
+    "P_DynamicMaskEmission_Title": "Effet de scan avec émission de masque dynamique",
+    "P_DynamicMaskEmission_Date": "06 Mar. 2026",
+    "P_DynamicMaskEmission_Description": "Exploration des techniques d'émission de masque dynamique pour créer un effet de scan !."
   }
 }
