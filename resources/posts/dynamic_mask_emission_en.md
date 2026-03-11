@@ -1,22 +1,10 @@
 # Creating a Scan Effect from an Emission Shader with Masking
 
-![Final render video](../videos/DynamicMaskEmission.gif)
+![Final render video](resources/videos/DynamicMaskEmission.gif)
 
 This year, I decided to dive seriously into the world of shaders to master them. To start this learning journey, I chose to work on an emission shader. It is an ideal first project because it is simpler to develop and does not require complex lighting calculations to provide an immediate visual result.
 
----
 
-# Summary
-1. [What is a shader?](#what-is-a-shader)
-2. [The Unreal and Unity approach](#the-unreal-and-unity-approach)
-3. [Problem: How to transform a simple emission shader into a scanner effect?](#problem-how-to-transform-a-simple-emission-shader-into-a-scanner-effect)
-4. [Step 1: Emission](#step-1-emission)
-5. [Step 2: Masking](#step-2-masking)
-6. [Step 3: UV Scrolling](#step-3-uv-scrolling)
-7. [Step 4: Scene Setup](#step-4-scene-setup)
-8. [Conclusion](#conclusion)
-
----
 
 ## What is a shader?
 
@@ -27,7 +15,7 @@ Each engine has its own specific ways of creating shaders. To ensure I understan
 
 > **Important**: Unity also has a nodal solution, Shader Graph. Beyond the fact that I find it less powerful than Unreal's Material Editor, there is simply no simple solution for programming in pure HLSL on Unreal Engine; therefore, my only option was to do this in Unity.
 
----
+
 
 ## The Unreal and Unity approach
 
@@ -37,7 +25,7 @@ Each engine has its own particularities for creating shaders. To ensure I unders
 
 > **Note**: Unity also offers a nodal solution, Shader Graph. Besides the fact that I consider it less efficient than Unreal's material editor, there is simply no easy way to program in HLSL on Unreal Engine, so my only option was to do it on Unity.
 
----
+
 
 ## How to transform a simple emission shader into a scanner effect? 
 
@@ -46,7 +34,7 @@ In my case, I imagined it as a glowing and relatively thin line rising along the
 
 > **Note**: Since this is a first shader, I will not take lighting management into account to simplify the code. This will have an impact on the final render difference between Unity and Unreal, as Unreal's material editor already handles certain lighting information natively, unlike Unity's ShaderLabs.
 
----
+
 
 ## Step 1: Emission
 
@@ -64,11 +52,11 @@ return float4(texColor.rgb + emission, texColor.a);
 
 This gives us our characteristic glowing halo. We will see later how to add Bloom to reinforce this effect; in the meantime, let's leave it as is.
 
-![Current render with emission.](../visuels/posts/dynamicMaskEmission/DME_Emission.jpg)
+![Current render with emission.](resources/visuels/posts/dynamicMaskEmission/DME_Emission.jpg)
 
 > **Aside**: Emission calculation differs between engines. Unreal uses a linear multiplication (`Color * Intensity`). Unity often uses a logarithmic logic (`Color * pow(2, Intensity)`), similar to how "stops" work in photography. To learn more about stops, I invite you to check this link: [https://en.wikipedia.org/wiki/Exposure_value](https://en.wikipedia.org/wiki/Exposure_value).
 
----
+
 
 ## Step 2: Masking
 
@@ -86,12 +74,12 @@ return float4(texColor.rgb + emission, texColor.a);
 
 This results in a fixed line at the character's feet.
 
-![Current render with masking.](../visuels/posts/dynamicMaskEmission/DME_Mask.jpg)
+![Current render with masking.](resources/visuels/posts/dynamicMaskEmission/DME_Mask.jpg)
 *If you don't see the band on the character's feet, don't worry. It is often located just below the mesh in these cases. By making it move in the next step, we will undoubtedly see it.*
 
 > **Important**: It is also possible to use a black and white texture as a mask if you want more specific or organic scan shapes. This is generally even more efficient than calculating the mask manually.
 
----
+
 
 ## Step 3: UV Scrolling
 
@@ -111,11 +99,11 @@ return float4(texColor.rgb + emission, texColor.a);
 
 By combining time and sine, we obtain a smooth and perpetual movement of the scan line.
 
-![Final render video](../videos/DynamicMaskEmission_Scan.gif)
+![Final render video](resources/videos/DynamicMaskEmission_Scan.gif)
 
 > **Note**: I will not go into detail regarding UVs as that will be the subject of my next shader project.
 
----
+
 
 ## Step 4: Scene Setup
 
@@ -125,7 +113,7 @@ Bloom detects areas where intensity exceeds 1.0 (HDR) and spreads them over neig
 - **To activate it in Unity**: Ensure the project uses URP or HDRP, then add a `Global Volume` component. Finally, configure the Bloom effect and make sure HDR is enabled on the camera.
 - **To activate it in Unreal**: It is enabled by default, but you can customize it by adding a `Post Process Volume` to your scene and modifying the `Bloom` category.
 
----
+
 
 ## Conclusion
 
@@ -133,4 +121,4 @@ This dynamic emission shader is, in my eyes, an essential foundation before tack
 
 I hope you enjoyed the topic. Thank you for your attention and feel free to contact me on LinkedIn to discuss it!
 
-![Final render video](../videos/DynamicMaskEmission.gif)
+![Final render video](resources/videos/DynamicMaskEmission.gif)

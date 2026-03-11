@@ -1,22 +1,10 @@
 # Crée un effet de scan à partir d'un shader d'émission avec masquage
 
-![Vidéo du rendu final](../videos/DynamicMaskEmission.gif)
+![Vidéo du rendu final](resources/videos/DynamicMaskEmission.gif)
 
 Cette année, j'ai décidé de plonger sérieusement dans l'univers des shaders pour les maîtriser. Pour débuter cet apprentissage, mon choix s'est porté sur un shader d'émission. C'est un premier projet idéal, car il est plus simple à développer et ne nécessite pas de calculs de lumières complexes pour offrir un résultat visuel immédiat.
 
----
 
-# Sommaire
-1. [Qu'est-ce qu'un shader ?](#quest-ce-quun-shader-)
-2. [L'approche Unreal et Unity](#lapproche-unreal-et-unity)
-3. [Problématique : Comment transformer un simple shader d'émission en un effet de scanner ?](#comment-transformer-un-simple-shader-démission-en-un-effet-de-scanner-)
-4. [Étape 1 : L'émission](#étape-1--lémission)
-5. [Étape 2 : Le masque](#étape-2--le-masque)
-6. [Étape 3 : Le scrolling UV](#étape-3--le-scrolling-uv)
-7. [Étape 4 : Setup de la scène](#étape-4--setup-de-la-scène)
-8. [Conclusion](#conclusion)
-
----
 
 ## Qu’est-ce qu’un shader ?
 
@@ -27,7 +15,7 @@ Chaque moteur possède ses particularités pour créer des shaders. Afin d'être
 
 > **Important** : Dans Unity, il existe aussi une solution nodale : le Shader Graph. Au-delà du fait que je l'estime moins performante que le Material Editor d'Unreal, il n'y a tout simplement pas de solution simple pour programmer en HLSL pur sur Unreal Engine ; ma seule option était donc de réaliser cela sur Unity.
 
----
+
 
 ## L'approche Unreal et Unity
 
@@ -37,7 +25,7 @@ Chaque moteur possède ses particularités pour créer des shaders. Afin d'être
 
 > **Précision** : Dans Unity aussi il existe une solution nodale, le Shader Graph. Au delà du fait que j'estime qu'elle est moins performante que le material editor d'Unreal, il n'y a tout simplement pas de solutions simple pour programmer en HLSL sur Unreal Engine, donc ma seule option était de réaliser cela sur Unity.
 
----
+
 
 ## Comment transformer un simple shader d'émission en un effet de scanner ? 
 
@@ -46,7 +34,7 @@ Dans mon cas, je l'ai imaginé comme une ligne surbrillante et relativement fine
 
 > **Précision** : Étant donné qu'il s'agit d'un premier shader, je ne vais pas prendre en compte la gestion de la lumière pour simplifier le code. Cela aura un impact sur la différence de rendu entre Unity et Unreal, car le Material Editor d'Unreal gère déjà certaines informations de lumière nativement, contrairement au ShaderLabs d'Unity.
 
----
+
 
 ## Étape 1 : L'émission
 
@@ -64,11 +52,11 @@ return float4(texColor.rgb + emission, texColor.a);
 
 On obtient ainsi notre halo lumineux caractéristique. Nous verrons par la suite comment ajouter le Bloom pour renforcer cet effet, en attendant, laissons-le ainsi.
 
-![Rendu actuel avec l'émission.](../visuels/posts/dynamicMaskEmission/DME_Emission.jpg)
+![Rendu actuel avec l'émission.](resources/visuels/posts/dynamicMaskEmission/DME_Emission.jpg)
 
 > **Aparté** : Le calcul de l'émission diffère selon les moteurs. Unreal utilise une multiplication linéaire (`Color * Intensity`). Unity utilise souvent une logique logarithmique (`Color * pow(2, Intensity)`), similaire au fonctionnement des "stops" en photographie. Pour en savoir plus sur les stops, je vous invite à consulter ce lien : [https://en.wikipedia.org/wiki/Exposure_value](https://en.wikipedia.org/wiki/Exposure_value).
 
----
+
 
 ## Étape 2 : Le masque
 
@@ -86,13 +74,13 @@ return float4(texColor.rgb + emission, texColor.a);
 
 On obtient ainsi une ligne fixe au niveau des pieds du personnage.
 
-![Rendu actuel avec le masquage.](..\visuels\posts\dynamicMaskEmission/DME_Mask.jpg)
+![Rendu actuel avec le masquage.](resources\visuels\posts\dynamicMaskEmission/DME_Mask.jpg)
 *Si vous ne voyez pas la bande sur les pieds du personnage, ne vous inquiétez pas. Elle est souvent située juste en dessous du mesh dans ce genre de cas. En la faisant bouger lors de la prochaine étape, elle apparaîtra sans aucun doute.*
 
 > **Important** : Il est également possible d'utiliser une texture en noir et blanc comme masque si l'on souhaite des formes de scan plus spécifiques ou organiques. C'est même généralement plus performant que de calculer soi-même le masque mathématiquement.
 
 
----
+
 
 ## Étape 3 : Le scrolling UV
 
@@ -112,11 +100,11 @@ return float4(texColor.rgb + emission, texColor.a);
 
 En combinant le temps et le sinus, on obtient un déplacement fluide et perpétuel de la ligne de scan.
 
-![Vidéo du rendu final](../videos/DynamicMaskEmission_Scan.gif)
+![Vidéo du rendu final](resources/videos/DynamicMaskEmission_Scan.gif)
 
 > **Note** : Je ne vais pas rentrer dans le détail concernant les UV car cela sera le sujet de mon prochain projet de shader.
 
----
+
 
 ## Étape 4 : Setup de la scène
 
@@ -126,7 +114,7 @@ Le Bloom détecte les zones dont l'intensité dépasse 1.0 (HDR) et les fait s'�
 - **Pour l'activer dans Unity** : Il faut s'assurer que le projet utilise URP ou HDRP, puis ajouter un composant `Global Volume`. Enfin, il faut configurer l'effet Bloom et s'assurer que le HDR est activé sur la caméra.
 - **Pour l'activer dans Unreal** : Il est activé par défaut, mais il est possible de le personnaliser en ajoutant un `Post Process Volume` dans votre scène et en modifiant les paramètres de la catégorie `Bloom`.
 
----
+
 
 ## Conclusion
 
@@ -134,4 +122,4 @@ Ce shader d'émission dynamique est une base indispensable à mes yeux avant d'a
 
 J'espère que le sujet vous aura plu. Merci pour votre attention et n'hésitez pas à me contacter sur LinkedIn pour en discuter !
 
-![Vidéo du rendu final](../videos/DynamicMaskEmission.gif)
+![Vidéo du rendu final](resources/videos/DynamicMaskEmission.gif)
