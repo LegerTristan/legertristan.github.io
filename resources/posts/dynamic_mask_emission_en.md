@@ -52,7 +52,7 @@ return float4(texColor.rgb + emission, texColor.a);
 
 This gives us our characteristic glowing halo. We will see later how to add Bloom to reinforce this effect; in the meantime, let's leave it as is.
 
-![Current render with emission.](resources/visuels/posts/dynamicMaskEmission/DME_Emission.jpg)
+![Current render with emission.](resources/visuels/posts/dynamicmaskemission/dme_emission.jpg)
 
 > **Aside**: Emission calculation differs between engines. Unreal uses a linear multiplication (`Color * Intensity`). Unity often uses a logarithmic logic (`Color * pow(2, Intensity)`), similar to how "stops" work in photography. To learn more about stops, I invite you to check this link: [https://en.wikipedia.org/wiki/Exposure_value](https://en.wikipedia.org/wiki/Exposure_value).
 
@@ -74,7 +74,7 @@ return float4(texColor.rgb + emission, texColor.a);
 
 This results in a fixed line at the character's feet.
 
-![Current render with masking.](resources/visuels/posts/dynamicMaskEmission/DME_Mask.jpg)
+![Current render with masking.](resources/visuels/posts/dynamicmaskemission/dme_mask.jpg)
 *If you don't see the band on the character's feet, don't worry. It is often located just below the mesh in these cases. By making it move in the next step, we will undoubtedly see it.*
 
 > **Important**: It is also possible to use a black and white texture as a mask if you want more specific or organic scan shapes. This is generally even more efficient than calculating the mask manually.
