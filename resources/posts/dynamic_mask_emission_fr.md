@@ -52,7 +52,7 @@ return float4(texColor.rgb + emission, texColor.a);
 
 On obtient ainsi notre halo lumineux caractéristique. Nous verrons par la suite comment ajouter le Bloom pour renforcer cet effet, en attendant, laissons-le ainsi.
 
-![Rendu actuel avec l'émission.](resources/visuels/posts/dynamicMaskEmission/DME_Emission.jpg)
+![Rendu actuel avec l'émission.](resources/visuels/posts/dynamicmaskemission/dme_emission.jpg)
 
 > **Aparté** : Le calcul de l'émission diffère selon les moteurs. Unreal utilise une multiplication linéaire (`Color * Intensity`). Unity utilise souvent une logique logarithmique (`Color * pow(2, Intensity)`), similaire au fonctionnement des "stops" en photographie. Pour en savoir plus sur les stops, je vous invite à consulter ce lien : [https://en.wikipedia.org/wiki/Exposure_value](https://en.wikipedia.org/wiki/Exposure_value).
 
@@ -74,7 +74,7 @@ return float4(texColor.rgb + emission, texColor.a);
 
 On obtient ainsi une ligne fixe au niveau des pieds du personnage.
 
-![Rendu actuel avec le masquage.](resources\visuels\posts\dynamicMaskEmission/DME_Mask.jpg)
+![Rendu actuel avec le masquage.](resources/visuels/posts/dynamicmaskemission/dme_mask.jpg)
 *Si vous ne voyez pas la bande sur les pieds du personnage, ne vous inquiétez pas. Elle est souvent située juste en dessous du mesh dans ce genre de cas. En la faisant bouger lors de la prochaine étape, elle apparaîtra sans aucun doute.*
 
 > **Important** : Il est également possible d'utiliser une texture en noir et blanc comme masque si l'on souhaite des formes de scan plus spécifiques ou organiques. C'est même généralement plus performant que de calculer soi-même le masque mathématiquement.
