@@ -46,9 +46,10 @@ Nous commençons par multiplier la teinte par l'intensité pour renforcer la lum
 float3 emission = _EmissionTint.rgb * _EmissionIntensity;
 return float4(texColor.rgb + emission, texColor.a);
 ```
-*Code HLSL pour appliquer l'émission sur le personnage.*
+*Code HLSL pour appliquer l'émission sur le personnage dans Unity.*
 
-> **Note** : Pour simplifier la rédaction de ces posts, je ne posterai que le code HLSL de chaque partie.
+![Structure nodale de l'émisson dans Unreal.](resources/visuels/posts/dynamicmaskemission/ue_nodes_emission.png)
+*Blueprint pour appliquer l'émission sur le personnage dans Unreal Engine.*
 
 On obtient ainsi notre halo lumineux caractéristique. Nous verrons par la suite comment ajouter le Bloom pour renforcer cet effet, en attendant, laissons-le ainsi.
 
@@ -70,7 +71,10 @@ float maskValue = pow(max(v2f.localPos.y, 0), _ScanSharpness);
 float3 emission = _EmissionTint.rgb * _EmissionIntensity * maskValue;
 return float4(texColor.rgb + emission, texColor.a);
 ```
-*Code HLSL pour n'afficher qu'une bande d'émission au niveau des pieds.*
+*Code HLSL pour n'afficher qu'une bande d'émission au niveau des pieds dans Unity.*
+
+![Structure nodale du masque dans Unreal.](resources/visuels/posts/dynamicmaskemission/ue_nodes_mask.png)
+*Blueprint pour n'afficher qu'une bande d'émission au niveau des pieds dans Unreal Engine.*
 
 On obtient ainsi une ligne fixe au niveau des pieds du personnage.
 
@@ -78,8 +82,6 @@ On obtient ainsi une ligne fixe au niveau des pieds du personnage.
 *Si vous ne voyez pas la bande sur les pieds du personnage, ne vous inquiétez pas. Elle est souvent située juste en dessous du mesh dans ce genre de cas. En la faisant bouger lors de la prochaine étape, elle apparaîtra sans aucun doute.*
 
 > **Important** : Il est également possible d'utiliser une texture en noir et blanc comme masque si l'on souhaite des formes de scan plus spécifiques ou organiques. C'est même généralement plus performant que de calculer soi-même le masque mathématiquement.
-
-
 
 
 ## Étape 3 : Le scrolling UV
@@ -96,14 +98,16 @@ maskValue = pow(max(scan, 0), _ScanSharpness);
 float3 emission = _EmissionTint.rgb * _EmissionIntensity * maskValue;
 return float4(texColor.rgb + emission, texColor.a);
 ```
-*Code HLSL pour ajouter le déplacement cyclique de la ligne.*
+*Code HLSL pour ajouter le déplacement cyclique de la ligne dans Unity.*
+
+![Structure nodale du scrolling dans Unreal.](resources/visuels/posts/dynamicmaskemission/ue_nodes_scrolling.png)
+*Blueprint pour ajouter le déplacement cyclique de la ligne dans Unreal Engine.*
 
 En combinant le temps et le sinus, on obtient un déplacement fluide et perpétuel de la ligne de scan.
 
 ![Vidéo du rendu final](resources/videos/DynamicMaskEmission_Scan.gif)
 
 > **Note** : Je ne vais pas rentrer dans le détail concernant les UV car cela sera le sujet de mon prochain projet de shader.
-
 
 
 ## Étape 4 : Setup de la scène

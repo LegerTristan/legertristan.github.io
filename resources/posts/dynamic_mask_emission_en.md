@@ -48,7 +48,9 @@ return float4(texColor.rgb + emission, texColor.a);
 ```
 *HLSL code to apply emission to the character.*
 
-> **Note**: To simplify the writing of these posts, I will only post the HLSL code for each part.
+![Blueprints for emission in Unreal.](resources/visuels/posts/dynamicmaskemission/ue_nodes_emission.png)
+
+Blueprint to apply emission to the character in Unreal Engine.
 
 This gives us our characteristic glowing halo. We will see later how to add Bloom to reinforce this effect; in the meantime, let's leave it as is.
 
@@ -71,6 +73,10 @@ float3 emission = _EmissionTint.rgb * _EmissionIntensity * maskValue;
 return float4(texColor.rgb + emission, texColor.a);
 ```
 *HLSL code to display only an emission band at the feet level.*
+
+![Blueprints for mask in Unreal.](resources/visuels/posts/dynamicmaskemission/ue_nodes_mask.png)
+
+Blueprint to display only an emission band at the feet level in Unreal Engine.
 
 This results in a fixed line at the character's feet.
 
@@ -96,6 +102,10 @@ float3 emission = _EmissionTint.rgb * _EmissionIntensity * maskValue;
 return float4(texColor.rgb + emission, texColor.a);
 ```
 *HLSL code to add the cyclical movement of the line.*
+
+![Blueprints for scrolling in Unreal.](resources/visuels/posts/dynamicmaskemission/ue_nodes_scrolling.png)
+
+Blueprint to add the cyclical movement of the line in Unreal Engine.
 
 By combining time and sine, we obtain a smooth and perpetual movement of the scan line.
 
