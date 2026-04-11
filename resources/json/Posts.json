@@ -8,7 +8,10 @@
     "P_DynamicMaskEmission_Description": "Exploring dynamic mask emission techniques to create a scan effect !",
     "P_UVManipulation_Title": "Making lava fluid and organic through UV manipulation",
     "P_UVManipulation_Date": "Mar. 30 2026",
-    "P_UVManipulation_Description": "How to use UV manipulation to transform static textures into organic, moving fluids like lava."
+    "P_UVManipulation_Description": "How to use UV manipulation to transform static textures into organic, moving fluids like lava.",
+    "P_ColorGrading_Title": "Customizing visual rendering via post-processing & color grading",
+    "P_ColorGrading_Date": "Apr. 14 2026",
+    "P_ColorGrading_Description": "Implementing a post-process shader to control contrast, saturation, and color isolation for stylized visuals."
   },
   "french": {
     "P_Reflection_Title": "Utiliser la réflexion pour produire du code dynamiquement.",
@@ -19,6 +22,9 @@
     "P_DynamicMaskEmission_Description": "Exploration des techniques d'émission de masque dynamique pour créer un effet de scan !.",
     "P_UVManipulation_Title": "Rendre de la lave fluide et organique via la manipulation d'UV",
     "P_UVManipulation_Date": "30 Mar. 2026",
-    "P_UVManipulation_Description": "Comment manipuler les coordonnées d'UV pour transformer des textures statiques en fluides organiques en mouvement comme la lave."
+    "P_UVManipulation_Description": "Comment manipuler les coordonnées d'UV pour transformer des textures statiques en fluides organiques en mouvement comme la lave.",
+    "P_ColorGrading_Title": "Personnaliser le rendu visuel via le post-process & le color grading",
+    "P_ColorGrading_Date": "14 Avr. 2026",
+    "P_ColorGrading_Description": "Mise en place d'un shader de post-process pour contrôler le contraste, la saturation et l'isolation de couleurs."
   }
 }
