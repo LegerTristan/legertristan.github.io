@@ -3,7 +3,7 @@
 ![GIF de la lave en mouvement](resources/videos/UVManipulation.gif)
 *Rendu final : Scrolling, distorsion et displacement combinés.*
 
-Après avoir exploré les bases avec mon [précédent shader d'effet de scan](post:dynamic_mask_emission), j'ai décidé de m'attaquer à un pilier fondamental du Technical Art : **la manipulation des UVs**.
+Après avoir exploré les bases un shader d'émission, j'ai décidé de m'attaquer à un pilier fondamental du Technical Art : **la manipulation des UVs**.
 
 L'objectif de ce projet était de transformer une texture de lave totalement statique en un fluide organique et visqueux, uniquement via le shader, sans aucune simulation physique ou animation pré-calculée. Pour cela, on va utiliser les coordonnées de texture et des mathématiques simples pour créer l'illusion du mouvement.
 

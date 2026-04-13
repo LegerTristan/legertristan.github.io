@@ -3,7 +3,7 @@
 ![Lava in motion GIF](resources/videos/UVManipulation.gif)
 *Final render: Scrolling, distortion, and displacement combined.*
 
-After exploring the basics with my [previous scan effect shader post](link-to-previous-post), I decided to tackle a fundamental pillar of Technical Art: **UV manipulation**.
+After exploring the basics with an emission shader, I decided to tackle a fundamental pillar of Technical Art: **UV manipulation**.
 
 The goal of this project was to transform a completely static lava texture into an organic, viscous fluid using only the shader, without any physics simulation or pre-calculated animation. To achieve this, we will use texture coordinates and simple mathematics to create the illusion of movement.
 
