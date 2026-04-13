@@ -23,20 +23,21 @@ Here are the steps:
 float3 color = (texColor.rgb - 0.5) * _Contrast + 0.5;
 ```
 
-In the Unreal Engine Material Editor, accessing the pixels rendered by the camera is not done through a standard texture sampler. You must use the **SceneTexture** node and set its ID to **PostProcessInput0**. This input retrieves the scene's image before our effect is applied.
-
 ![Nodes to add in Unreal for contrast.](resources/visuels/posts/colorgrading/cg_nodes_contrast.png)
+
+>In the Unreal Engine Material Editor, accessing the pixels rendered by the camera is not done through a standard texture sampler.    
+> You must use the **SceneTexture** node and set its ID to **PostProcessInput0**. This input retrieves the scene's image before our effect is applied.
 
 ![Render illustrating contrast adjustment in Unreal](resources/visuels/posts/colorgrading/cg_rendu_contrast.png)
 
----
+
 
 ## Second Concept: Saturation and Luminance
 Saturation controls the intensity of colors. This is what allows us to turn images into black and white, for example.
 
 Saturation defines how much of the luminance is used in our scene.
 Simply put, luminance is the **brightness of a color as perceived by the human eye**.
-The human eye does not perceive all colors with the same intensity. At equal power, green will always appear much brighter to us than blue. Therefore, for a realistic result, we use a standard luminance vector: `(0.2126, 0.7152, 0.0722)`.
+The human eye does not perceive all colors with the same intensity. At equal power, green will always appear much brighter to us than blue. Therefore, for a realistic result, we use a standard luminance vector: `(0.2126, 0.7152, 0.0722)`.   
 Here is how to use luminance to set up saturation:
 
 1. Perform a **Dot Product** between the pixel and this luminance vector to obtain a perfect gray value.
@@ -45,14 +46,14 @@ Here is how to use luminance to set up saturation:
 ```hlsl
 // Luminance and saturation calculation
 float luma = dot(color, float3(0.2126, 0.7152, 0.0722));
-float3 saturatedColor = lerp(luma.xxx, color, _Saturation);
+float3 saturatedColor = lerp(float3(luma), color, _Saturation);
 ```
 
 ![Nodes to add in Unreal for saturation.](resources/visuels/posts/colorgrading/cg_nodes_saturation.png)
 
 ![Render illustrating luminance-based saturation in Unreal](resources/visuels/posts/colorgrading/cg_rendu_saturation.png)
 
----
+
 
 ## Third Concept: Color Isolation
 This technique involves desaturating the entire scene except for a specific hue (for example, keeping only red for a dramatic effect).
@@ -74,7 +75,7 @@ Using the `smoothstep` function allows for a smooth transition and avoids pixela
 
 ![Render illustrating color isolation with full desaturation on non-isolated areas.](resources/visuels/posts/colorgrading/cg_rendu_color_isolation.png)
 
----
+
 
 ## Post-Process Setup
 Once the shader is written, it must be injected into the engine's rendering pipeline. The setup is quite different between Unity and Unreal.
@@ -111,7 +112,7 @@ Varyings vert (Attributes input) {
 
 ![Post Process Volume setup in Unreal](resources/visuels/posts/colorgrading/cg_postprocess_unreal_2.png)
 
----
+
 
 ## Differences and Optimizations
 

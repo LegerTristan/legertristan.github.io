@@ -10,7 +10,7 @@ Contrairement aux précédents projets, l'objectif ici n'est pas de suivre un d�
 ## Qu'est-ce que le Color Grading ?
 Le Color Grading (ou étalonnage) consiste à modifier l'apparence d'une image. En jeu vidéo, il sert à renforcer une narration, simuler une caméra spécifique ou simplement donner une signature visuelle unique. Un exemple concret est l'obtention d'un rendu "Noir" ou "Cinématique", où la gestion de la lumière et des teintes prime sur la couleur brute.
 
----
+
 
 ## Première notion : Le Contraste
 Le contraste définit l'écart d'intensité entre les zones sombres et les zones claires d'une scène. Un contraste élevé renforce la profondeur mais peut rapidement effacer les ombres et les surbrillances.
@@ -26,14 +26,14 @@ Voilà les étapes :
 float3 color = (texColor.rgb - 0.5) * _Contrast + 0.5;
 ```
 
+![Nodes à ajouter dans Unreal pour le contraste.](resources/visuels/posts/colorgrading/cg_nodes_contrast.png)
+
 > Dans l'éditeur de matériaux d'Unreal Engine, l'accès aux pixels rendus par la caméra ne se fait pas via une texture classique.   
 > Il faut utiliser le nœud **SceneTexture** et régler son ID sur **PostProcessInput0**. C'est cette entrée qui récupère l'image de la scène avant l'application de l'effet.
 
-![Nodes à ajouter dans Unreal pour le contraste.](resources/visuels/posts/colorgrading/cg_nodes_contrast.png)
-
 ![Rendu illustrant l'ajustement du contraste dans Unreal](resources/visuels/posts/colorgrading/cg_rendu_contrast.png)
 
----
+
 
 ## Deuxième notion : La Saturation et la Luminance
 La saturation contrôle l'intensité des couleurs. C'est grâce à cela que l'on va passer les images en noir et blanc par exemple.
@@ -56,7 +56,7 @@ float3 saturatedColor = lerp(luma.xxx, color, _Saturation);
 
 ![Rendu illustrant la saturation basée sur la luminance dans Unreal](resources/visuels/posts/colorgrading/cg_rendu_saturation.png)
 
----
+
 
 ## Troisième notion : L'isolation d'une couleur
 Cette technique consiste à désaturer toute la scène à l'exception d'une teinte précise (par exemple, ne garder que le rouge pour un effet dramatique).
@@ -78,7 +78,7 @@ L'utilisation de la fonction `smoothstep` permet de lisser la transition et d'é
 
 ![Rendu illustrant l'isolation de couleur avec désaturation totale sur les zones non isolées.](resources/visuels/posts/colorgrading/cg_rendu_color_isolation.png)
 
----
+
 
 ## Configuration du Post-Process
 Une fois le shader écrit, il doit être injecté dans le pipeline de rendu du moteur. Entre Unity et Unreal le setup n'est pas du tout le même.
@@ -115,7 +115,7 @@ Varyings vert (Attributes input) {
 
 ![Setup du Post Process Volume dans Unreal](resources/visuels/posts/colorgrading/cg_postprocess_unreal_2.png)
 
----
+
 
 ## Différences et Optimisations
 
