@@ -81,7 +81,7 @@ function PostDetail() {
         },
         blockquote: ({children}) => {
             return <div className="important-text-block">{children}</div>
-        }
+        },
     };
 
     return (
