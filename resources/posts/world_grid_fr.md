@@ -153,7 +153,7 @@ Le nœud **PerturbNormalHQ** utilise ensuite ces dérivées pour "tordre" la nor
 
 Le WorldGrid Shader est un bon exemple de la manière dont des mathématiques simples (`frac`, `abs`, `dot`) peuvent résoudre des problèmes de production concrets. Ce projet m'a permis de solidifier ma compréhension des espaces de coordonnées, une étape cruciale avant d'attaquer des sujets plus artistiques.
 
-![Grille sur différentes formes : Local vs World Space](resources/visuels/posts/worldgrid/WorldGrid.jpg)
+![Grille sur différentes formes : Local vs World Space](resources/videos/WorldGrid.gif)
 
 
 

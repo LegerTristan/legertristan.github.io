@@ -149,4 +149,4 @@ The **PerturbNormalHQ** node then uses these derivatives to "twist" the mesh nor
 
 The WorldGrid Shader is a good example of how simple mathematics (`frac`, `abs`, `dot`) can solve concrete production problems. This project allowed me to solidify my understanding of coordinate spaces, a crucial step before tackling more artistic subjects.
 
-![Grid shader on different shapes : Local vs World Space](resources/visuels/posts/worldgrid/WorldGrid.jpg)
+![Grid shader on different shapes : Local vs World Space](resources/videos/WorldGrid.gif)
