@@ -104,7 +104,7 @@ Pour réaliser la conversion, on utilise des fonctions de transformation de vect
 *   **Unity :** `TransformObjectToWorld(input.vertexPosition)` pour passer du local au monde.
 *   **Unreal :** Le nœud **Transform** (Source: World Space, Destination: Local Space) pour faire l'inverse.
 
-![Nodes Unreal Local Space](resources/visuels/posts/worldgrid/ue_nodes_localspace.png)
+![Noeuds Unreal pour le Local Space](resources/visuels/posts/worldgrid/ue_nodes_local_space.png)
 
 ---
 

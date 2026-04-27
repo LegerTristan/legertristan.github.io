@@ -1,6 +1,6 @@
 # WorldGrid Shader: Mastering Scale and Spaces
 
-![Grid shader GIF on different shapes](resources/videos/WorldGrid_Showcase.gif)
+![Grid shader on different shapes : Local vs World Space](resources/videos/WorldGrid.gif)
 *Final render: An adaptive procedural grid with relief and rounded corners.*
 
 After initiating myself into post-process shaders, I am continuing my Technical Art roadmap by tackling an essential game development tool: the **WorldGrid Shader**.
@@ -102,7 +102,7 @@ To perform the conversion, vector transformation functions are used:
 *   **Unity:** `TransformObjectToWorld(input.vertexPosition)` to move from local to world.
 *   **Unreal:** The **Transform** node (Source: World Space, Destination: Local Space) to do the inverse.
 
-![Unreal Local Space Nodes](resources/visuels/posts/worldgrid/ue_nodes_localspace.png)
+![Unreal Local Space Nodes](resources/visuels/posts/worldgrid/ue_nodes_local_space.png)
 
 ---
 
@@ -149,4 +149,4 @@ The **PerturbNormalHQ** node then uses these derivatives to "twist" the mesh nor
 
 The WorldGrid Shader is a good example of how simple mathematics (`frac`, `abs`, `dot`) can solve concrete production problems. This project allowed me to solidify my understanding of coordinate spaces, a crucial step before tackling more artistic subjects.
 
-![Final Grid Shader showcase](resources/visuels/posts/worldgrid/final_showcase.jpg)
+![Grid shader on different shapes : Local vs World Space](resources/visuels/posts/worldgrid/WorldGrid.jpg)
