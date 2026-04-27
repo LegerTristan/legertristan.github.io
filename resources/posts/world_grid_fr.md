@@ -33,8 +33,7 @@ float2 gridCell = frac(position / _GridSize);
 gridCell = abs(gridCell - 0.5); // Centrage des coordonnées
 ```
 
-![Noeuds Unreal Frac](resources/visuels/posts/worldgrid/ue_nodes_frac.png)
-*Dans Unreal, il existe un noeud Frac qui fonctionne exactement de la même manière que la fonction.*
+![Dans Unreal, il existe un noeud Frac qui fonctionne exactement de la même manière que la fonction.](resources/visuels/posts/worldgrid/ue_nodes_frac.png)
 
 ---
 
@@ -48,11 +47,12 @@ Face à ce genre de problèmes, on a déjà vu la solution dans un ancien post ,
 
 ```hlsl
 // Unity HLSL : Création du masque de ligne
-float2 mask2D = smoothstep(0.5 - _LineThickness - _Bevel, 0.5 - _LineThickness, gridCell);
+float finalLineThickness = _LineThickness / 2;
+float2 mask2D = smoothstep(0.5 - finalLineThickness - _Bevel, 0.5 - finalLineThickness, gridCell);
 float gridMask = max(mask2D.x, mask2D.y);
 ```
 
-![Nodes dans Unreal](resources/visuels/posts/worldgrid/ue_nodes_step.png)
+![Nodes dans Unreal pour réaliser le smoothstep](resources/visuels/posts/worldgrid/ue_nodes_step.png)
 
 > **Note :** Ici, j'utilise une variable "Bevel" car il me sert également plus tard dans la réalisation de rainures. Dans votre cas, vous pouvez totalement renommer la variable comme vous le souhaitez.
 
@@ -64,7 +64,7 @@ float gridMask = max(mask2D.x, mask2D.y);
 
 Si vous réalisez le shader en même temps, vous avez dû vous rendre compte de plusieurs problèmes. Par exemple, selon le moteur de jeu, le rendu de la grille est anormal sur n'importe quelle autre forme que le cube. De plus, à l'exception de la face supérieure et inférieure, les autres faces ont l'air étirées.
 
-Cela est dû au fait que la grille est représentée uniquement sur un plan pour le moment or, notre scène est en 3D. Il faut donc adapter notre formule aux différents plans : on va donc utiliser le **Triplanar Mapping**.
+Cela est dû au fait que la grille est représentée uniquement sur un plan pour le moment or, notre scène est en 3D. Il faut donc adapter notre formule aux différents plans : on va utiliser le **Triplanar Mapping**.
 
 Cette technique résout la plupart de nos problèmes en projetant la grille depuis les trois axes (X, Y, Z) simultanément. Cela revient donc à l'appliquer sur 3 plans à la fois.    
 Ensuite, le shader calcule un "poids" pour chaque face en fonction de sa normale : si une face regarde vers le haut, on affiche la projection Y. Si elle regarde devant, on affiche la projection Z, etc.
@@ -87,8 +87,7 @@ float hZ = GetGridHeight(pos.xy / _GridSize);
 float finalH = (hX * weights.x) + (hY * weights.y) + (hZ * weights.z);
 ```
 
-![Comparaison Triplanar Mapping](resources/visuels/posts/worldgrid/render_triplanar_mapping.jpg)
-*À gauche : Triplanar Mapping (propre sur toutes les faces). À droite : projection simple (étirement). *
+![À gauche : Triplanar Mapping (propre sur toutes les faces). À droite : projection simple (étirement).](resources/visuels/posts/worldgrid/render_triplanar_mapping.png)
 
 ---
 
@@ -98,7 +97,8 @@ Par défaut, un World Grid Shader fonctionne en World Space. Si vous tournez vot
 
 J'ai donc ajouté un mode **Local Space**. Celui-ci a évidemment un défaut comparé au World Space : la grille s'étire avec l'objet si on change son scale. Pour annuler cela, on récupère la taille réelle de l'objet dans le monde (`WorldScale`) et on multiplie la position locale par celle-ci. Ainsi, 1 unité de grille correspond toujours à 1 mètre dans le monde, même si le cube est étiré.
 
-> **Important :** L'espace par défaut diffère selon les moteurs. **Unity** envoie les données de mesh en **Local Space** (Object Space) dans le vertex shader. Pour obtenir le World Space, il faut utiliser la matrice `unity_ObjectToWorld`. À l'inverse, le Material Editor d'**Unreal** est directement en **World Space**. Pour retrouver l'espace local, il faut utiliser le nœud `LocalPosition`.
+> **Important :** L'espace par défaut diffère selon les moteurs. **Unity** envoie les données de mesh en **Local Space** (Object Space) dans le vertex shader. Pour obtenir le World Space, il faut utiliser la matrice `unity_ObjectToWorld`.    
+> À l'inverse, le Material Editor d'**Unreal** est directement en **World Space**. Pour retrouver l'espace local, il faut utiliser le nœud `LocalPosition`.
 
 Pour réaliser la conversion, on utilise des fonctions de transformation de vecteurs :
 *   **Unity :** `TransformObjectToWorld(input.vertexPosition)` pour passer du local au monde.
@@ -120,9 +120,9 @@ float cornerMask = 1.0 - smoothstep(finalRadius - _Bevel, finalRadius, distanceT
 gridMask = max(gridMask, cornerMask);
 ```
 
-![Noeuds Unreal Corner](resources/visuels/posts/worldgrid/ue_nodes_corner.png)
+![Équivalent du code HLSL d'Unity dans le Material Editor d'Unreal](resources/visuels/posts/worldgrid/ue_nodes_corner.png)
 
-![Rendu coins arrondis](resources/visuels/posts/worldgrid/render_corner.jpg)
+![Rendu coins arrondis](resources/visuels/posts/worldgrid/render_corner.png)
 
 ---
 
@@ -143,10 +143,9 @@ float3 finalNormal = normalize(normalWS + bump);
 *   **Dans Unreal :** En Deferred Rendering, on ne calcule pas la lumière soi-même. On utilise les **dérivées matérielles** via les nœuds **DDX** et **DDY**. En outre, ces noeuds fournissent la différence de valeur entre le pixel actuel et son voisin sur l'écran. 
 Le nœud **PerturbNormalHQ** utilise ensuite ces dérivées pour "tordre" la normale du mesh instantanément. C'est extrêmement performant car cela évite de recalculer la fonction de grille plusieurs fois, ce qui est nécessaire dans la méthode utilisée sur Unity.
 
-![Noeuds Unreal Bevel](resources/visuels/posts/worldgrid/ue_nodes_bevel.png)
+![Noeuds Unreal pour le Bevel](resources/visuels/posts/worldgrid/ue_nodes_bevel.png)
 
-![Rendu Bevel Unity](resources/visuels/posts/worldgrid/render_bevel.jpg)
-*L'ajout du relief change radicalement la perception de l'objet, lui donnant un aspect "gravé".*
+![L'ajout du relief change radicalement la perception de l'objet, lui donnant un aspect "gravé".](resources/visuels/posts/worldgrid/render_bevel.png)
 
 ---
 

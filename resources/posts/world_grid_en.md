@@ -32,8 +32,7 @@ float2 gridCell = frac(position / _GridSize);
 gridCell = abs(gridCell - 0.5); // Centering coordinates
 ```
 
-![Unreal Frac Nodes](resources/visuels/posts/worldgrid/ue_nodes_frac.png)
-*In Unreal, there is a Frac node that works exactly the same way as the function.*
+![In Unreal, there is a Frac node that works exactly the same way as the function.](resources/visuels/posts/worldgrid/ue_nodes_frac.png)
 
 ---
 
@@ -47,11 +46,12 @@ Facing this type of problem, we have already seen the solution in a previous pos
 
 ```hlsl
 // Unity HLSL: Creating the line mask
-float2 mask2D = smoothstep(0.5 - _LineThickness - _Bevel, 0.5 - _LineThickness, gridCell);
+float finalLineThickness = _LineThickness / 2;
+float2 mask2D = smoothstep(0.5 - finalLineThickness - _Bevel, 0.5 - finalLineThickness, gridCell);
 float gridMask = max(mask2D.x, mask2D.y);
 ```
 
-![Unreal Nodes](resources/visuels/posts/worldgrid/ue_nodes_step.png)
+![Unreal Nodes for the smoothstep](resources/visuels/posts/worldgrid/ue_nodes_step.png)
 
 > **Note:** Here, I use a "Bevel" variable because it also serves me later in the creation of grooves. In your case, you can completely rename the variable as you wish.
 
@@ -63,7 +63,7 @@ float gridMask = max(mask2D.x, mask2D.y);
 
 If you are creating the shader at the same time, you must have noticed several problems. For example, depending on the game engine, the grid rendering is abnormal on any shape other than a cube. Moreover, with the exception of the top and bottom faces, the other faces look stretched.
 
-This is due to the fact that the grid is currently represented only on one plane, whereas our scene is in 3D. We must therefore adapt our formula to the different planes; we will therefore use **Triplanar Mapping**.
+This is due to the fact that the grid is currently represented only on one plane, whereas our scene is in 3D. We must therefore adapt our formula to the different planes; we will use **Triplanar Mapping**.
 
 This technique solves most of our problems by projecting the grid from the three axes (X, Y, Z) simultaneously. This essentially amounts to applying it on 3 planes at once. Then, the shader calculates a "weight" for each face based on its normal: if a face looks upward, we display the Y projection. If it looks forward, we display the Z projection, etc.
 
@@ -85,8 +85,7 @@ float hZ = GetGridHeight(pos.xy / _GridSize);
 float finalH = (hX * weights.x) + (hY * weights.y) + (hZ * weights.z);
 ```
 
-![Triplanar Mapping Comparison](resources/visuels/posts/worldgrid/render_triplanar_mapping.jpg)
-*Left: Triplanar Mapping (clean on all faces). Right: simple projection (stretching).*
+![Left: Triplanar Mapping (clean on all faces). Right: simple projection (stretching).](resources/visuels/posts/worldgrid/render_triplanar_mapping.png)
 
 ---
 
@@ -96,7 +95,8 @@ By default, a World Grid Shader works in World Space. If you rotate your cube, t
 
 I therefore added a **Local Space** mode. This obviously has drawbacks compared to World Space, specifically that the grid stretches with the object if you change its scale. Fortunately, there is a way to cancel this out. The method consists of retrieving the actual size of the object in the world (`WorldScale`) and multiplying the local position by it. Thus, 1 grid unit always corresponds to 1 meter in the world, even if the cube is stretched.
 
-> **Important:** The default space differs depending on the engines. **Unity** sends mesh data in **Local Space** (Object Space) by default in the vertex shader. To obtain World Space, the `unity_ObjectToWorld` matrix must be used. Conversely, the **Unreal** Material Editor is directly in **World Space**. To retrieve local space, the specific `LocalPosition` node must be used.
+> **Important:** The default space differs depending on the engines. **Unity** sends mesh data in **Local Space** (Object Space) by default in the vertex shader. To obtain World Space, the `unity_ObjectToWorld` matrix must be used.   
+> Conversely, the **Unreal** Material Editor is directly in **World Space**. To retrieve local space, the specific `LocalPosition` node must be used.
 
 To perform the conversion, vector transformation functions are used:
 *   **Unity:** `TransformObjectToWorld(input.vertexPosition)` to move from local to world.
@@ -118,9 +118,9 @@ float cornerMask = 1.0 - smoothstep(finalRadius - _Bevel, finalRadius, distanceT
 gridMask = max(gridMask, cornerMask);
 ```
 
-![Unreal Corner Nodes](resources/visuels/posts/worldgrid/ue_nodes_corner.png)
+![Equivalent of Unity HLSL in Unreal Material Editor](resources/visuels/posts/worldgrid/ue_nodes_corner.png)
 
-![Rounded corners render](resources/visuels/posts/worldgrid/render_corner.jpg)
+![Rounded corners render](resources/visuels/posts/worldgrid/render_corner.png)
 
 ---
 
@@ -128,7 +128,7 @@ gridMask = max(gridMask, cornerMask);
 
 To give depth to the grid without adding polygons, we simulate a relief.   
 
-*   **In Unity:** I used a "finite difference" method. We sample the height of the grid at the current pixel (`h`), then a bit more to the right (`hX`) and a bit higher (`hY`). The difference gives us a slope, which we combine with the object's normal to react to light.
+*   **In Unity:** We sample the height of the grid at the current pixel (`h`), then a bit more to the right (`hX`) and a bit higher (`hY`). The difference gives us a slope, which we combine with the object's normal to react to light.
 
 ```hlsl
 // Unity HLSL: Calculating the slope for relief
@@ -141,8 +141,7 @@ The **PerturbNormalHQ** node then uses these derivatives to "twist" the mesh nor
 
 ![Unreal Bevel Nodes](resources/visuels/posts/worldgrid/ue_nodes_bevel.png)
 
-![Unity Bevel Render](resources/visuels/posts/worldgrid/render_bevel.jpg)
-*The addition of relief radically changes the perception of the object, giving it an "engraved" appearance.*
+![The addition of relief radically changes the perception of the object, giving it an "engraved" appearance.](resources/visuels/posts/worldgrid/render_bevel.png)
 
 ---
 
