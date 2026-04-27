@@ -11,7 +11,10 @@
     "P_UVManipulation_Description": "How to use UV manipulation to transform static textures into organic, moving fluids like lava.",
     "P_ColorGrading_Title": "Customizing visual rendering via post-processing & color grading",
     "P_ColorGrading_Date": "Apr. 14 2026",
-    "P_ColorGrading_Description": "Implementing a post-process shader to control contrast, saturation, and color isolation for stylized visuals."
+    "P_ColorGrading_Description": "Implementing a post-process shader to control contrast, saturation, and color isolation for stylized visuals.",
+    "P_WorldGrid_Title": "WorldGrid Shader: An Essential Prototyping Tool for Game Designers.",
+    "P_WorldGrid_Date": "Apr. 28 2026",
+    "P_WorldGrid_Description": "Creating a procedural grid shader in Local and World Space to provide an effective prototyping tool for Game Designers, independent of UVs."
   },
   "french": {
     "P_Reflection_Title": "Utiliser la réflexion pour produire du code dynamiquement.",
@@ -25,6 +28,9 @@
     "P_UVManipulation_Description": "Comment manipuler les coordonnées d'UV pour transformer des textures statiques en fluides organiques en mouvement comme la lave.",
     "P_ColorGrading_Title": "Personnaliser le rendu visuel via le post-process & le color grading",
     "P_ColorGrading_Date": "14 Avr. 2026",
-    "P_ColorGrading_Description": "Mise en place d'un shader de post-process pour contrôler le contraste, la saturation et l'isolation de couleurs."
+    "P_ColorGrading_Description": "Mise en place d'un shader de post-process pour contrôler le contraste, la saturation et l'isolation de couleurs.",
+    "P_WorldGrid_Title": "WorldGrid Shader : Un outil de prototypage essentiel pour les Game Designers",
+    "P_WorldGrid_Date": "28 Avr. 2026",
+    "P_WorldGrid_Description": "Création d'un shader de grille procédurale en Local et World Space pour proposer un outil de prototypage efficace aux Game Designers, sans dépendre des UVs."
   }
 }
