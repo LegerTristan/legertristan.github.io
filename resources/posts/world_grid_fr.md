@@ -1,6 +1,6 @@
 # WorldGrid Shader : Maîtriser l'échelle et les espaces
 
-![GIF de la grille sur différentes formes](resources/videos/WorldGrid_Showcase.gif)
+![Grille sur différentes formes : Local vs World Space](resources/videos/WorldGrid.gif)
 *Rendu final : Une grille procédurale adaptative avec relief et coins arrondis.*
 
 Après m'être inité aux shaders post-process, je poursuis ma roadmap Technical Art en m'attaquant à un outil indispensable du développement de jeux : le **WorldGrid Shader**.
@@ -153,7 +153,7 @@ Le nœud **PerturbNormalHQ** utilise ensuite ces dérivées pour "tordre" la nor
 
 Le WorldGrid Shader est un bon exemple de la manière dont des mathématiques simples (`frac`, `abs`, `dot`) peuvent résoudre des problèmes de production concrets. Ce projet m'a permis de solidifier ma compréhension des espaces de coordonnées, une étape cruciale avant d'attaquer des sujets plus artistiques.
 
-![Image finale du Grid Shader](resources/visuels/posts/worldgrid/final_showcase.jpg)
+![Grille sur différentes formes : Local vs World Space](resources/visuels/posts/worldgrid/WorldGrid.jpg)
 
 
 
