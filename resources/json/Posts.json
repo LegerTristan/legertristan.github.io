@@ -14,7 +14,10 @@
     "P_ColorGrading_Description": "Implementing a post-process shader to control contrast, saturation, and color isolation for stylized visuals.",
     "P_WorldGrid_Title": "WorldGrid Shader: An Essential Prototyping Tool for Game Designers.",
     "P_WorldGrid_Date": "Apr. 28 2026",
-    "P_WorldGrid_Description": "Creating a procedural grid shader in Local and World Space to provide an effective prototyping tool for Game Designers, independent of UVs."
+    "P_WorldGrid_Description": "Creating a procedural grid shader in Local and World Space to provide an effective prototyping tool for Game Designers, independent of UVs.",
+    "P_CellShading_Title": "Creating a Toon Shader: Turning light into flat areas of colour using Cell Shading",
+    "P_CellShading_Date": "May 12 2026",
+    "P_CellShading_Description": "Transforming realistic light gradients into sharp, stylized color bands by subverting traditional lighting models."
   },
   "french": {
     "P_Reflection_Title": "Utiliser la réflexion pour produire du code dynamiquement.",
@@ -31,6 +34,9 @@
     "P_ColorGrading_Description": "Mise en place d'un shader de post-process pour contrôler le contraste, la saturation et l'isolation de couleurs.",
     "P_WorldGrid_Title": "WorldGrid Shader : Un outil de prototypage essentiel pour les Game Designers",
     "P_WorldGrid_Date": "28 Avr. 2026",
-    "P_WorldGrid_Description": "Création d'un shader de grille procédurale en Local et World Space pour proposer un outil de prototypage efficace aux Game Designers, sans dépendre des UVs."
+    "P_WorldGrid_Description": "Création d'un shader de grille procédurale en Local et World Space pour proposer un outil de prototypage efficace aux Game Designers, sans dépendre des UVs.",
+    "P_CellShading_Title": "Réaliser un Toon Shader : Transformer la lumière en aplats de couleurs via le Cell Shading",
+    "P_CellShading_Date": "12 Mai 2026",
+    "P_CellShading_Description": "Transformer les dégradés de lumière réalistes en bandes de couleurs stylisées en détournant les modèles d'éclairage traditionnels."
   }
 }
