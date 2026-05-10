@@ -89,7 +89,7 @@ float3 ambientColor = texColor.rgb * _AmbientTint.rgb;
 
 ---
 
-## 4. Unreal Implementation: Deferred Rendering
+## Unreal Implementation: Deferred Rendering
 
 In Unreal, the solution involves using a **Post-Process Material**.
 

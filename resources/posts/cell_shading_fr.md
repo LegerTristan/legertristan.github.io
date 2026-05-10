@@ -89,7 +89,7 @@ float3 ambiantColor = texColor.rgb * _AmbiantTint.rgb;
 
 ---
 
-## 4. Implémentation Unreal : Deferred Rendering
+## Implémentation Unreal : Deferred Rendering
 
 Sur Unreal, la solution consiste à utiliser un **Post-Process Material**.
 
@@ -109,7 +109,7 @@ On divise la `SceneColor` par la `BaseColor`. Le résultat nous donne uniquement
 
 ---
 
-## Conclusion
+## Conclusion 
 
 Le Cell Shading montre que le Technical Art consiste souvent à détourner des lois physiques (comme le modèle de Blinn-Phong) pour servir une direction artistique. Dans le prochain chapitre, nous ajouterons les reflets spéculaires et la **Rim Light** pour détacher nos objets du décor.
 
